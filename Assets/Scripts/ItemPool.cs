@@ -10,23 +10,31 @@ public class ItemPool : MonoBehaviour
     void Start()
     {
         // Mage items
-        mageItems.Add(CreateItem("Mage Staff", ItemType.Weapon, CharacterClass.Mage, 5));
-        mageItems.Add(CreateItem("Mage Robe", ItemType.Armor, CharacterClass.Mage, 6));
+        mageItems.Add(CreateItem("Mage Staff", ItemType.Weapon, ArmorType.Unspecified, CharacterClass.Mage, 1, "Sprites/MageStaff"));
+        mageItems.Add(CreateItem("Mage Robe", ItemType.Armor, ArmorType.Helmet, CharacterClass.Mage, 1, "Sprites/MageHelmet"));
+        mageItems.Add(CreateItem("Mage Robe", ItemType.Armor, ArmorType.Chestplate, CharacterClass.Mage, 1, "Sprites/MageChestplate"));
+        mageItems.Add(CreateItem("Mage Robe", ItemType.Armor, ArmorType.Greaves, CharacterClass.Mage, 1, "Sprites/MageGreaves"));
 
         // Knight items
-        knightItems.Add(CreateItem("Knight Sword", ItemType.Weapon, CharacterClass.Knight, 1));
-        knightItems.Add(CreateItem("Knight Armor", ItemType.Armor, CharacterClass.Knight, 1));
+        knightItems.Add(CreateItem("Knight Sword", ItemType.Weapon, ArmorType.Unspecified, CharacterClass.Knight, 1, "Sprites/KnightSword"));
+        knightItems.Add(CreateItem("Knight Armor", ItemType.Armor, ArmorType.Helmet, CharacterClass.Knight, 1, "Sprites/KnightHelmet"));
+        knightItems.Add(CreateItem("Knight Armor", ItemType.Armor, ArmorType.Chestplate, CharacterClass.Knight, 1, "Sprites/KnightChestplate"));
+        knightItems.Add(CreateItem("Knight Armor", ItemType.Armor, ArmorType.Greaves, CharacterClass.Knight, 1, "Sprites/KnightGreaves"));
 
         // Hunter items
-        hunterItems.Add(CreateItem("Hunter Bow", ItemType.Weapon, CharacterClass.Hunter, 1));
-        hunterItems.Add(CreateItem("Hunter Cloak", ItemType.Armor, CharacterClass.Hunter, 1));
+        hunterItems.Add(CreateItem("Hunter Bow", ItemType.Weapon, ArmorType.Unspecified, CharacterClass.Hunter, 1, "Sprites/HunterBow"));
+        hunterItems.Add(CreateItem("Hunter Cloak", ItemType.Armor, ArmorType.Helmet, CharacterClass.Hunter, 1, "Sprites/HunterHelmet"));
+        hunterItems.Add(CreateItem("Hunter Cloak", ItemType.Armor, ArmorType.Chestplate, CharacterClass.Hunter, 1, "Sprites/HunterChestplate"));
+        hunterItems.Add(CreateItem("Hunter Cloak", ItemType.Armor, ArmorType.Greaves, CharacterClass.Hunter, 1, "Sprites/HunterGreaves"));
     }
 
-    Item CreateItem(string name, ItemType type, CharacterClass itemClass, int level)
+    Item CreateItem(string name, ItemType type, ArmorType armorType, CharacterClass itemClass, int level, string spritePath)
     {
         GameObject itemObject = new GameObject(name);
         Item item = itemObject.AddComponent<Item>();
-        item.SetItemProperties(name, type, itemClass, level);
+        item.SetItemProperties(name, type, armorType, itemClass, level, spritePath); // SetItemProperties metodunun doðru parametrelerle çaðrýldýðýndan emin olun
+        SpriteRenderer spriteRenderer = itemObject.AddComponent<SpriteRenderer>();
+        spriteRenderer.sprite = Resources.Load<Sprite>(spritePath);
         return item;
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2998543997854605894}
   - component: {fileID: 3504834428333081901}
   - component: {fileID: -4749159619733090516}
-  - component: {fileID: 6753981791192198212}
+  - component: {fileID: 4809463943532416713}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  lootPrefab: {fileID: 0}
+  lootPrefab: {fileID: 8297662635110595019, guid: 58de83179fd2ecd42baa8f927d6b6695, type: 3}
   playerInventory: {fileID: 0}
-  itemPool: {fileID: 6753981791192198212}
+  itemPool: {fileID: 6543976312664051239, guid: c02c138c1738caf4a8adb71bd88bc638, type: 3}
 --- !u!70 &3504834428333081901
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6753981791192198212
+--- !u!114 &4809463943532416713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,10 +175,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480335796289377542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 433c3a7f48fdd8641a7cfc5d89d4d4af, type: 3}
+  m_Script: {fileID: 11500000, guid: 26de2aa9cb9e601428f872ebadc5fe82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mageItems:
-  - {fileID: 0}
-  knightItems: []
-  hunterItems: []
+  itemSprite: {fileID: 21300000, guid: 6fdf616af2b919c43b3eef17e6fd0adc, type: 3}
+  itemType: 1
+  armorType: 0
+  itemClass: 0
+  itemLevel: 0

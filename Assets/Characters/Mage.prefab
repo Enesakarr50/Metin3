@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 3881526143016083114}
   - component: {fileID: 3436729278090952123}
   - component: {fileID: 4276067481051678137}
-  - component: {fileID: 5261452185738028060}
   - component: {fileID: 8316552041849247069}
   - component: {fileID: 603557729106800474}
   - component: {fileID: 3256525505507818487}
@@ -135,24 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e146e08fe733ab4bac640ec5ebf1e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armorText: {fileID: 9022770526071416399, guid: 64fed4990ac3985488e5bdbdc2e5ac28, type: 3}
-  weaponText: {fileID: 8783623836532046947, guid: d9d4277f9ab130c44a0f66c530649263, type: 3}
---- !u!114 &5261452185738028060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3869957061633344487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26de2aa9cb9e601428f872ebadc5fe82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: 
-  itemType: 0
-  itemClass: 0
-  itemLevel: 0
+  armorImages:
+  - {fileID: 8160191553418767222, guid: 15a99df318b64e04dabd137e3e73412a, type: 3}
+  - {fileID: 4728006192114615174, guid: 1a5f511eec91bc64c9a128e4ccef9f4b, type: 3}
+  - {fileID: 117045864515029863, guid: 1a371c4e013f30c4cb3ab65a63d7a1c8, type: 3}
+  weaponImage: {fileID: 7270425332533585592, guid: e65b38ca9698b354b9cfbad405e0948e, type: 3}
 --- !u!114 &8316552041849247069
 MonoBehaviour:
   m_ObjectHideFlags: 0

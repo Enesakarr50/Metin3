@@ -7,8 +7,13 @@ public class Enemy : MonoBehaviour
     public Inventory playerInventory;
     public ItemPool itemPool;
 
+    private void Start()
+    {
+        
+    }
     public void TakeDamage(int damage)
     {
+        playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         health -= damage;
 
         if (health <= 0)
@@ -19,11 +24,14 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        
+        DropLoot();
         if (Random.value < 0.5f)
         {
-            DropLoot();
+            
         }
         Destroy(gameObject);
+        
     }
 
     void DropLoot()
@@ -36,7 +44,7 @@ public class Enemy : MonoBehaviour
         {
             GameObject loot = Instantiate(lootPrefab, transform.position, Quaternion.identity);
             LootItem lootItem = loot.GetComponent<LootItem>();
-            lootItem.SetItemProperties(randomItem.itemName, randomItem.itemType, randomItem.itemClass, randomItem.itemLevel);
+            lootItem.SetItemProperties(randomItem.GetComponent<SpriteRenderer>().sprite, randomItem.itemType, randomItem.armorType, randomItem.itemClass, randomItem.itemLevel);
         }
     }
 }

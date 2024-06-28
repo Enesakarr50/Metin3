@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class LootItem : MonoBehaviour
 {
-    public string itemName;
+    public Sprite itemSprite;
     public ItemType itemType;
+    public ArmorType armorType;
     public CharacterClass itemClass;
     public int itemLevel;
 
-    public void SetItemProperties(string name, ItemType type, CharacterClass itemClass, int level)
+    public void SetItemProperties(Sprite sprite, ItemType type, ArmorType armorType, CharacterClass itemClass, int level)
     {
-        this.itemName = name;
+        this.itemSprite = sprite;
         this.itemType = type;
+        this.armorType = armorType;
         this.itemClass = itemClass;
         this.itemLevel = level;
     }
@@ -23,13 +25,17 @@ public class LootItem : MonoBehaviour
             if (player.characterClass == itemClass)
             {
                 Inventory playerInventory = other.GetComponent<Inventory>();
-                if (itemType == ItemType.Weapon)
+                switch (armorType)
                 {
-                    playerInventory.EquipWeapon(itemName + " Lv." + itemLevel, itemLevel);
-                }
-                else if (itemType == ItemType.Armor)
-                {
-                    playerInventory.EquipArmor(0, itemName + " Lv." + itemLevel, itemLevel); // Zýrh slotunu uygun þekilde ayarlayýn
+                    case ArmorType.Helmet:
+                        playerInventory.EquipArmor(0, itemSprite, itemLevel);
+                        break;
+                    case ArmorType.Chestplate:
+                        playerInventory.EquipArmor(1, itemSprite, itemLevel);
+                        break;
+                    case ArmorType.Greaves:
+                        playerInventory.EquipArmor(2, itemSprite, itemLevel);
+                        break;
                 }
                 Destroy(gameObject);
             }

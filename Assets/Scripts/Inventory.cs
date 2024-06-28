@@ -1,24 +1,24 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
-using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public TextMeshProUGUI armorText;
-    public TextMeshProUGUI weaponText;
+    public Image[] armorImages; // Kafalýk, Göðüslük, Dizlik
+    public Image weaponImage;
 
-    private string[] armor = new string[3];
-    private string weapon;
+    private Sprite[] armorSprites = new Sprite[3];
+    private Sprite weaponSprite;
     private int[] armorLevels = new int[3];
     private int weaponLevel;
 
     void Start()
     {
-        armor[0] = "Baþlangýç Zýrhý";
-        armor[1] = "Baþlangýç Zýrhý";
-        armor[2] = "Baþlangýç Zýrhý";
-        weapon = "Baþlangýç Kýlýcý";
+        // Baþlangýç eþyalarý
+        armorSprites[0] = Resources.Load<Sprite>("Armors/Items/Icon30_01");
+        armorSprites[1] = Resources.Load<Sprite>("Armors/Items/Icon30_01");
+        armorSprites[2] = Resources.Load<Sprite>("Armors/Items/Icon30_01");
+        weaponSprite = Resources.Load<Sprite>("Armors/Items/Icon30_01");
         armorLevels[0] = 1;
         armorLevels[1] = 1;
         armorLevels[2] = 1;
@@ -29,20 +29,23 @@ public class Inventory : MonoBehaviour
 
     void UpdateUI()
     {
-        armorText.text = "Zýrhlar: " + string.Join(", ", armor);
-        weaponText.text = "Silah: " + weapon;
+        for (int i = 0; i < armorImages.Length; i++)
+        {
+            armorImages[i].sprite = armorSprites[i];
+        }
+        weaponImage.sprite = weaponSprite;
     }
 
-    public void EquipArmor(int slot, string newArmor, int level)
+    public void EquipArmor(int slot, Sprite newArmorSprite, int level)
     {
-        armor[slot] = newArmor;
+        armorSprites[slot] = newArmorSprite;
         armorLevels[slot] = level;
         UpdateUI();
     }
 
-    public void EquipWeapon(string newWeapon, int level)
+    public void EquipWeapon(Sprite newWeaponSprite, int level)
     {
-        weapon = newWeapon;
+        weaponSprite = newWeaponSprite;
         weaponLevel = level;
         UpdateUI();
     }
