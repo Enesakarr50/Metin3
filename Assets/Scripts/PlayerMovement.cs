@@ -1,3 +1,5 @@
+using UnityEditor.Animations;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -6,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     public ClassTypes Class;
     public GameManager GameManager;
+
 
     private void Start()
     {
@@ -17,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
         if (Class == null)
         {
             Class = GameManager.CurrentClass;
-            gameObject.GetComponent<SpriteRenderer>().sprite = Class.CharSprite;
+          //  gameObject.GetComponent<SpriteRenderer>().sprite = Class.CharSprite;
+          gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
         }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");

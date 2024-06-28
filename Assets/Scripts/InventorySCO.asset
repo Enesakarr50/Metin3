@@ -9,8 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24fb3122d94eabf43a09bed276b7b86f, type: 3}
-  m_Name: Mage
+  m_Script: {fileID: 11500000, guid: 81703a37c6516ab4da117844e4e3debb, type: 3}
+  m_Name: InventorySCO
   m_EditorClassIdentifier: 
-  ClassNames: Mage
-  AnimatorController: {fileID: 9100000, guid: 711b8fc611147e64989e1ea36f10ff53, type: 2}
+  HelmetHolder: {fileID: 0}
+  BodyHolder: {fileID: 0}
+  LegHolder: {fileID: 0}
+  WeaponHolder: {fileID: 0}
+  Helmet: {fileID: 0}
+  Body: {fileID: 0}
+  Leg: {fileID: 0}
+  Weapon: {fileID: 0}

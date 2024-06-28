@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Knight
   m_EditorClassIdentifier: 
   ClassNames: Knight
-  CharSprite: {fileID: 1449030050, guid: 2854e6bb53ebf2e458901c83630440b1, type: 3}
+  AnimatorController: {fileID: 9100000, guid: f9b658328fee90d4eaaae8e36322f623, type: 2}

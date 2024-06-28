@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPoint;
@@ -7,11 +8,14 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayers;
     public int attackDamage = 10;
 
+
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+    
         }
     }
 
