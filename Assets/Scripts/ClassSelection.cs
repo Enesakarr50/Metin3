@@ -1,23 +1,23 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
-public class CharacterSelection : MonoBehaviour
+public class ClassSelection : MonoBehaviour
 {
     public void SelectMage()
     {
-        PlayerPrefs.SetInt("CharacterClass", (int)CharacterClass.Mage);
+        PlayerPrefs.SetInt("ClassEum", (int)Classes.Mage);
         StartGame();
     }
 
     public void SelectKnight()
     {
-        PlayerPrefs.SetInt("CharacterClass", (int)CharacterClass.Knight);
+        PlayerPrefs.SetInt("ClassEum", (int)Classes.Knight);
         StartGame();
     }
 
     public void SelectHunter()
     {
-        PlayerPrefs.SetInt("CharacterClass", (int)CharacterClass.Hunter);
+        PlayerPrefs.SetInt("ClassEum", (int)Classes.Hunter);
         StartGame();
     }
 

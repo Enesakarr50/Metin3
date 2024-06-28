@@ -1,30 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject magePrefab;
-    public GameObject knightPrefab;
-    public GameObject hunterPrefab;
+    public ClassTypes Mage;
+    public ClassTypes Knight;
+    public ClassTypes Hunter;
+    public ClassTypes CurrentClass;
 
-    void Start()
+    private void Start()
     {
-        CharacterClass chosenClass = (CharacterClass)PlayerPrefs.GetInt("CharacterClass");
+        Classes chosenClass = (Classes)PlayerPrefs.GetInt("ClassEum");
+        CurrentClass = null;
 
-        GameObject player = null;
         switch (chosenClass)
         {
-            case CharacterClass.Mage:
-                player = Instantiate(magePrefab, Vector3.zero, Quaternion.identity);
+            case Classes.Mage:
+                CurrentClass = Mage;
                 break;
-            case CharacterClass.Knight:
-                player = Instantiate(knightPrefab, Vector3.zero, Quaternion.identity);
+            case Classes.Knight:
+                CurrentClass = Knight;
                 break;
-            case CharacterClass.Hunter:
-                player = Instantiate(hunterPrefab, Vector3.zero, Quaternion.identity);
+            case Classes.Hunter:
+                CurrentClass = Hunter;
                 break;
         }
-
-        // Player scriptini oyuncu objesine ekle
-        player.GetComponent<Player>().SetCharacterClass(chosenClass);
     }
 }

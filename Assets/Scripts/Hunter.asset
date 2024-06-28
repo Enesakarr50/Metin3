@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fb3122d94eabf43a09bed276b7b86f, type: 3}
+  m_Name: Hunter
+  m_EditorClassIdentifier: 
+  ClassNames: Hunter
+  CharSprite: {fileID: -192609730, guid: 476d5f2a6844d2c4da97118ab3dc1ffc, type: 3}

@@ -308,8 +308,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1299677213}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
+      - m_Target: {fileID: 1299677217}
+        m_TargetAssemblyTypeName: ClassSelection, Assembly-CSharp
         m_MethodName: SelectMage
         m_Mode: 1
         m_Arguments:
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 1299677216}
   - component: {fileID: 1299677215}
   - component: {fileID: 1299677214}
-  - component: {fileID: 1299677213}
+  - component: {fileID: 1299677217}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1196,18 +1196,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1299677213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299677212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7c7a7176051a14ea453f4ecebd1f36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1299677214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,6 +1246,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1299677217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299677212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7560bfab32dc11743ba0f5bd9482a5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1319516227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,8 +1475,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1299677213}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
+      - m_Target: {fileID: 1299677217}
+        m_TargetAssemblyTypeName: ClassSelection, Assembly-CSharp
         m_MethodName: SelectHunter
         m_Mode: 1
         m_Arguments:
@@ -1683,8 +1683,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1299677213}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
+      - m_Target: {fileID: 1299677217}
+        m_TargetAssemblyTypeName: ClassSelection, Assembly-CSharp
         m_MethodName: SelectKnight
         m_Mode: 1
         m_Arguments:

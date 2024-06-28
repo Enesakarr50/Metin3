@@ -4,9 +4,21 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Vector2 movement;
+    public ClassTypes Class;
+    public GameManager GameManager;
+
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
+        if (Class == null)
+        {
+            Class = GameManager.CurrentClass;
+            gameObject.GetComponent<SpriteRenderer>().sprite = Class.CharSprite;
+        }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
