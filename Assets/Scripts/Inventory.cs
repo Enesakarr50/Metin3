@@ -8,6 +8,6 @@ using UnityEngine.UI;
 public class Inventory : ScriptableObject
 {
     public Sprite HelmetHolder,BodyHolder,LegHolder,WeaponHolder;
-    public Sprite Helmet, Body, Leg, Weapon;
+    public Item Helmet, Body, Leg, Weapon;
 
 }
