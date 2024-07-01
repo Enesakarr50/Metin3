@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,16 +11,11 @@ public class InventoryController : MonoBehaviour
     public Image bodyHolder;
     public Image legHolder;
     public Image weaponHolder;
-
-    private void Start()
+    private void Update()
     {
-        inventory.HelmetHolder = helmetHolder;
-        inventory.BodyHolder = bodyHolder;
-        inventory.LegHolder = legHolder;
-        inventory.WeaponHolder = weaponHolder;
-    }
-    private void addItem()
-    {
-
+        inventory.HelmetHolder = helmetHolder.sprite;
+        inventory.BodyHolder = bodyHolder.sprite;
+        inventory.LegHolder = legHolder.sprite;
+        inventory.WeaponHolder = weaponHolder.sprite;
     }
 }

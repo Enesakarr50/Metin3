@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New Inventory", menuName = "Inventory")]
 public class Inventory : ScriptableObject
 {
-    public Image HelmetHolder,BodyHolder,LegHolder,WeaponHolder;
-    public Image Helmet, Body, Leg, Weapon;
+    public Sprite HelmetHolder,BodyHolder,LegHolder,WeaponHolder;
+    public Sprite Helmet, Body, Leg, Weapon;
 
 }

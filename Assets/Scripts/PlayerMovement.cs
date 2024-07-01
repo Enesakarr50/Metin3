@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     public ClassTypes Class;
     public GameManager GameManager;
+    public GameObject Panel;
 
 
     private void Start()
@@ -25,6 +26,14 @@ public class PlayerMovement : MonoBehaviour
         }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if(Input.GetKeyDown(KeyCode.C) && Panel.active == true) 
+        {
+            Panel.SetActive(false);
+        }
+        else if(Input.GetKeyDown(KeyCode.C) && Panel.active == false)
+        {
+            Panel.SetActive(true);
+        }
     }
 
     void FixedUpdate()
