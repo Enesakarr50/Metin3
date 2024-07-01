@@ -11,6 +11,12 @@ public enum ItemType
     Legplate,
     Weapon
 }
+public enum Class
+{
+    Mage,
+    Knight,
+    Hunter
+}
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Item")]
 public class Item : ScriptableObject
@@ -20,5 +26,6 @@ public class Item : ScriptableObject
     public int ItemLvl;
     public GameObject GameObject;
     public ItemType ItemType;
+    public Class Class;
 
 }

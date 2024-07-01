@@ -11,18 +11,18 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Classes chosenClass = (Classes)PlayerPrefs.GetInt("ClassEum");
+        Class chosenClass = (Class)PlayerPrefs.GetInt("ClassEum");
         CurrentClass = null;
 
         switch (chosenClass)
         {
-            case Classes.Mage:
+            case Class.Mage:
                 CurrentClass = Mage;
                 break;
-            case Classes.Knight:
+            case Class.Knight:
                 CurrentClass = Knight;
                 break;
-            case Classes.Hunter:
+            case Class.Hunter:
                 CurrentClass = Hunter;
                 break;
         }

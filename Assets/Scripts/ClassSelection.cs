@@ -5,19 +5,19 @@ public class ClassSelection : MonoBehaviour
 {
     public void SelectMage()
     {
-        PlayerPrefs.SetInt("ClassEum", (int)Classes.Mage);
+        PlayerPrefs.SetInt("ClassEum", (int)Class.Mage);
         StartGame();
     }
 
     public void SelectKnight()
     {
-        PlayerPrefs.SetInt("ClassEum", (int)Classes.Knight);
+        PlayerPrefs.SetInt("ClassEum", (int)Class.Knight);
         StartGame();
     }
 
     public void SelectHunter()
     {
-        PlayerPrefs.SetInt("ClassEum", (int)Classes.Hunter);
+        PlayerPrefs.SetInt("ClassEum", (int)Class.Hunter);
         StartGame();
     }
 

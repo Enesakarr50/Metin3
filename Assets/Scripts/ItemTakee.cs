@@ -24,22 +24,27 @@ public class ItemTakee : MonoBehaviour
                     Destroy(gameObject);
                     invCont.helmetHolder.sprite = Item.ItemImage;
                     invCont.Helmet = Item;
+                    invCont.iLvl += Item.ItemLvl;
 
                     break;
                 case ItemType.Chestplate:
                     Destroy(gameObject);
                     invCont.bodyHolder.sprite = Item.ItemImage;
                     invCont.Cp = Item;
+                    invCont.iLvl += Item.ItemLvl;
+
                     break;
                 case ItemType.Legplate:
                     Destroy(gameObject);
                     invCont.legHolder.sprite = Item.ItemImage;
                     invCont.Lp = Item;
+                    invCont.iLvl += Item.ItemLvl;
                     break;
                 case ItemType.Weapon:
                     Destroy(gameObject);
                     invCont.weaponHolder.sprite = Item.ItemImage;
                     invCont.Weap = Item;
+                    invCont.iLvl += Item.ItemLvl;
                     break;
             }
         }

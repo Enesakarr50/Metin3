@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Leg
   m_EditorClassIdentifier: 
   ItemImage: {fileID: 21300000, guid: da106fe481022f148b59bf4c92680b0b, type: 3}
-  ItemName: 
-  ItemLvl: 0
+  ItemName: StarterLeg
+  ItemLvl: 1
   GameObject: {fileID: 7404593568580738209, guid: 1002a2cf415529a4b90e06deb5c9c357, type: 3}
   ItemType: 2
+  Class: 0
