@@ -16,4 +16,4 @@ MonoBehaviour:
   ItemName: "Y\u0131lan"
   ItemLvl: 3
   GameObject: {fileID: 730336266805167090, guid: b4cc7f5fc47d04841b5181d3618f2333, type: 3}
-  ItemType: 0
+  ItemType: 3

@@ -16,25 +16,29 @@ public class ItemTakee : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Item.ItemType == ItemType.Helmet)
+        switch (Item.ItemType)
         {
-            Destroy(gameObject);
-            invCont.helmetHolder.sprite = Item.ItemImage;
-        }
-        else if (Item.ItemType == ItemType.Chestplate)
-        {
-            Destroy(gameObject);
-            invCont.bodyHolder.sprite = Item.ItemImage;
-        }
-        else if (Item.ItemType == ItemType.Legplate)
-        {
-            Destroy(gameObject);
-            invCont.legHolder.sprite = Item.ItemImage;
-        }
-        else if (Item.ItemType == ItemType.Weapon)
-        {
-            Destroy(gameObject);
-            invCont.weaponHolder.sprite = Item.ItemImage;
+            case ItemType.Helmet:
+                Destroy(gameObject);
+                invCont.helmetHolder.sprite = Item.ItemImage;
+                invCont.Helmet = Item;
+
+                break;
+            case ItemType.Chestplate:
+                Destroy(gameObject);
+                invCont.bodyHolder.sprite = Item.ItemImage;
+                invCont.Cp = Item;
+                break;
+            case ItemType.Legplate:
+                Destroy(gameObject);
+                invCont.legHolder.sprite = Item.ItemImage;
+                invCont.Lp = Item;
+                break;
+            case ItemType.Weapon:
+                Destroy(gameObject);
+                invCont.weaponHolder.sprite = Item.ItemImage;
+                invCont.Weap = Item;
+                break;
         }
     }
 }
