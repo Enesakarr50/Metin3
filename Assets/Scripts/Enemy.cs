@@ -54,8 +54,8 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        int attackIndex = Random.Range(1, 5); // 1 ile 4 arasýnda rastgele bir sayý seç
-        animator.SetTrigger("Attack" + attackIndex);
+        
+        animator.SetTrigger("Attack");
         // Burada oyuncuya hasar verin. Örneðin:
         // playerTransform.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
     }
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
+        animator.SetTrigger("Hurt");
         if (health <= 0 && isDead == false)
         {
             Die();

@@ -1,5 +1,3 @@
-using UnityEditor.Animations;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,35 +7,95 @@ public class PlayerMovement : MonoBehaviour
     public ClassTypes Class;
     public GameManager GameManager;
     public GameObject Panel;
+    public int health = 100;
 
+    private Animator animator;
+    private bool isDead = false;
 
     private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+
+        if (Class == null)
+        {
+            Class = GameManager.CurrentClass;
+            // gameObject.GetComponent<SpriteRenderer>().sprite = Class.CharSprite;
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
+        }
     }
 
     void Update()
     {
-        if (Class == null)
-        {
-            Class = GameManager.CurrentClass;
-          //  gameObject.GetComponent<SpriteRenderer>().sprite = Class.CharSprite;
-          gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
-        }
+        if (isDead)
+            return;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        if(Input.GetKeyDown(KeyCode.C) && Panel.active == true) 
+
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            Panel.SetActive(false);
+            Panel.SetActive(!Panel.activeSelf);
         }
-        else if(Input.GetKeyDown(KeyCode.C) && Panel.active == false)
+
+        if (health <= 0)
         {
-            Panel.SetActive(true);
+            Die();
+        }
+
+        UpdateAnimation();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+
         }
     }
 
     void FixedUpdate()
     {
-        transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
+        if (!isDead)
+        {
+            transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
+        }
+    }
+
+    void UpdateAnimation()
+    {
+        if (movement.magnitude > 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (!isDead)
+        {
+            health -= damage;
+            animator.SetTrigger("Hurt");
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    void Die()
+    {
+        isDead = true;
+        animator.SetTrigger("Die");
+        // Ölüm animasyonunun tamamlanmasý ve oyuncunun etkileþime girememesi için gerekli kodlarý ekleyin.
+        // Örneðin: GetComponent<Rigidbody2D>().isKinematic = true;
+        // veya: GetComponent<Collider2D>().enabled = false;
+    }
+
+    void Attack()
+    {
+        // Saldýrý animasyonu için gereken kodlarý buraya ekleyin.
+        animator.SetTrigger("Attack");
     }
 }

@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPoint;
@@ -10,19 +9,28 @@ public class PlayerAttack : MonoBehaviour
     public ClassTypes Class;
     public GameManager GameManager;
 
+    private Camera mainCamera;
 
+    private void Start()
+    {
+        mainCamera = Camera.main;
+        
+        
+
+    }
 
     void Update()
     {
         if (Class == null)
         {
             Class = GameManager.CurrentClass;
-        
-        }else if (Class == GameManager.Mage)
-        {
-            attackRange = 4;
+
         }
-        else if(Class == GameManager.Knight)
+        else if (Class == GameManager.Mage)
+        {
+            attackRange = 10;
+        }
+        else if (Class == GameManager.Knight)
         {
             attackRange = 1;
         }
@@ -30,31 +38,32 @@ public class PlayerAttack : MonoBehaviour
         {
             attackRange = 1;
         }
+
+        
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
-    
         }
-        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     void Attack()
     {
-        RaycastHit2D[] hitEnemies = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position,attackRange,enemyLayers);
+        
+        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0f; 
+
+        
+        Vector3 attackDirection = (mousePosition - attackPoint.position).normalized;
+        Debug.DrawRay(attackPoint.position, attackDirection * attackRange, Color.red, 0.1f);
+
+        
+        RaycastHit2D[] hitEnemies = Physics2D.RaycastAll(attackPoint.position, attackDirection, attackRange, enemyLayers);
 
         foreach (RaycastHit2D hit in hitEnemies)
         {
-            
             hit.collider.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        if (attackPoint == null)
-            return;
-
-        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
-    }
-     
+   
 }
