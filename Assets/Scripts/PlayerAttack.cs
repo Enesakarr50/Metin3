@@ -68,14 +68,17 @@ public class PlayerAttack : MonoBehaviour
         mousePosition.z = 0f;
 
         Vector3 shootDirection = (mousePosition - firePoint.position).normalized;
-        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, shootDirection);
 
-        GameObject fireball = Instantiate(fireballPrefab, firePoint.position, rotation);
+        GameObject fireball = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
         Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
 
         if (rb != null)
         {
             rb.velocity = shootDirection * fireballSpeed;
         }
+
+        // Fireball'un yönünü ayarla
+        float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+        fireball.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 }

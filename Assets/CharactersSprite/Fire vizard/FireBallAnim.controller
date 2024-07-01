@@ -34,7 +34,7 @@ AnimatorController:
   m_Name: FireBallAnim
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Explossion
+  - m_Name: isExploding
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -62,7 +62,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Explossion
+    m_ConditionEvent: isExploding
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7394370433628779473}

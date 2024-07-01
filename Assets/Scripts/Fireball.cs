@@ -2,13 +2,23 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-    public float speed = 10f; 
-    public int damage = 20; 
-    public GameObject impactEffect; 
+    public float speed = 10f;
+    public int damage = 20;
+    public GameObject impactEffect; // Artýk kullanýlmayacak
+    private Animator animator;
+    private bool isExploding = false;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime); 
+        if (!isExploding)
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -18,22 +28,29 @@ public class Fireball : MonoBehaviour
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damage); 
+                enemy.TakeDamage(damage);
             }
-            DestroyFireball();
+            TriggerExplosion();
         }
         else if (collision.CompareTag("Obstacle"))
         {
-            DestroyFireball(); 
+            TriggerExplosion();
         }
     }
 
-    void DestroyFireball()
+    void TriggerExplosion()
     {
-        if (impactEffect != null)
+        if (!isExploding)
         {
-            Instantiate(impactEffect, transform.position, transform.rotation); 
+            isExploding = true;
+            animator.SetBool("isExploding", true);
+            speed = 0; // Hareketi durdur
         }
-        Destroy(gameObject); 
+    }
+
+    // Animasyon sonlandýðýnda bu fonksiyon çaðrýlýr
+    public void OnExplosionAnimationEnd()
+    {
+        Destroy(gameObject);
     }
 }
