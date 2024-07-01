@@ -4,3 +4,10 @@ public enum Classes
     Knight,
     Hunter
 }
+public enum ItemTypes
+{
+    Helmet,
+    Chestplate,
+    Legplate,
+    Weapon
+}

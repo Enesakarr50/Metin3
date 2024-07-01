@@ -328,6 +328,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackDamage: 10
+  Class: {fileID: 0}
+  GameManager: {fileID: 1329801185}
 --- !u!212 &469509919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1382,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3170554338082640996, guid: b4fdb7af7f77d3a469ebee03e7a03d63, type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a8b7183e0d77cf4a83b8d453a07e125, type: 2}
     - target: {fileID: 8180260787004390527, guid: b4fdb7af7f77d3a469ebee03e7a03d63, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.25

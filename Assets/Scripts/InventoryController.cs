@@ -18,4 +18,8 @@ public class InventoryController : MonoBehaviour
         inventory.LegHolder = legHolder;
         inventory.WeaponHolder = weaponHolder;
     }
+    private void addItem()
+    {
+
+    }
 }

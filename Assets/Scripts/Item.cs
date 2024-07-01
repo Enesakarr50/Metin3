@@ -10,5 +10,6 @@ public class Item : ScriptableObject
     public Sprite ItemImage;
     public string ItemName;
     public int ItemLvl;
+    public GameObject GameObject;
 
 }
