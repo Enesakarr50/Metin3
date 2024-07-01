@@ -19,6 +19,10 @@ public class InventoryController : MonoBehaviour
     public TextMeshProUGUI IlvlTxt;
     public int iLvl;
 
+    private void Start()
+    {
+        inventory.Ilvl = iLvl;
+    }
     private void Update()
     {
 

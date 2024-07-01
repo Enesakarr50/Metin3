@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Panel.SetActive(!Panel.activeSelf);
+
         }
 
         if (health <= 0)
