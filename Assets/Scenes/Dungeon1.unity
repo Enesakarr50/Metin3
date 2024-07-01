@@ -236,7 +236,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f862e9313a5a1428852a77e076bee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 513890342966112804, guid: b4fdb7af7f77d3a469ebee03e7a03d63, type: 3}
+  enemyTypes:
+  - prefab: {fileID: 513890342966112804, guid: b4fdb7af7f77d3a469ebee03e7a03d63, type: 3}
+    spawnProbability: 0.5
+  - prefab: {fileID: 513890342966112804, guid: 9ade23bcd7305e342bd29e090c6e1f45, type: 3}
+    spawnProbability: 0.3
+  - prefab: {fileID: 513890342966112804, guid: 8ced41ea35c70304fab060c9a711d4a0, type: 3}
+    spawnProbability: 0.2
   spawnInterval: 5
   enemiesPerWave: 5
   spawnRadius: 10

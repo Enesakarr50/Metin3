@@ -13,11 +13,13 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     private float attackTimer;
     private bool isDead = false;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -32,7 +34,7 @@ public class Enemy : MonoBehaviour
         {
             if (attackTimer <= 0f)
             {
-                Attack();
+                animator.SetBool("isAttacking", true);
                 attackTimer = attackCooldown;
             }
             animator.SetBool("isWalking", false);
@@ -41,6 +43,7 @@ public class Enemy : MonoBehaviour
         {
             MoveTowardsPlayer();
         }
+        UpdateDirection();
     }
 
     private void MoveTowardsPlayer()
@@ -52,13 +55,18 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isAttacking", false);
     }
 
-    private void Attack()
+    private void UpdateDirection()
     {
-        
-        animator.SetTrigger("Attack");
-        // Burada oyuncuya hasar verin. Örneðin:
-        // playerTransform.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+        if (playerTransform.position.x > transform.position.x)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (playerTransform.position.x < transform.position.x)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
+
 
     public void TakeDamage(int damage)
     {

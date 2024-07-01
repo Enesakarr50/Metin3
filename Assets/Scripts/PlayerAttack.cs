@@ -8,6 +8,9 @@ public class PlayerAttack : MonoBehaviour
     public int attackDamage = 10;
     public ClassTypes Class;
     public GameManager GameManager;
+    public Transform firePoint; // Fireball'un fýrlatýlacaðý nokta
+    public GameObject fireballPrefab; // Fireball prefab'i
+    public float fireballSpeed = 10f; // Fireball'un hýzý
 
     private Camera mainCamera;
 
@@ -43,6 +46,8 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+            Shoot();
+
         }
     }
 
@@ -65,5 +70,15 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-   
+    void Shoot()
+    {
+        GameObject fireball = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation); // Fireball oluþtur
+        Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = firePoint.right * fireballSpeed; // Fireball'a hýz ver
+        }
+    }
+
+
 }

@@ -11,15 +11,17 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator animator;
     private bool isDead = false;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (Class == null)
         {
             Class = GameManager.CurrentClass;
-            // gameObject.GetComponent<SpriteRenderer>().sprite = Class.CharSprite;
+            
             gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
         }
     }
@@ -43,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         UpdateAnimation();
+        UpdateDirection();
 
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
-
         }
     }
 
@@ -81,6 +83,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 Die();
             }
+        }
+    }
+
+    void UpdateDirection()
+    {
+        if (movement.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (movement.x < 0)
+        {
+            spriteRenderer.flipX = true;
         }
     }
 

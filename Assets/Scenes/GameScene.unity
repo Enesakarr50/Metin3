@@ -1888,6 +1888,9 @@ MonoBehaviour:
   attackDamage: 10
   Class: {fileID: 0}
   GameManager: {fileID: 1599013676}
+  firePoint: {fileID: 1691670607}
+  fireballPrefab: {fileID: 0}
+  fireballSpeed: 10
 --- !u!4 &1715756962
 Transform:
   m_ObjectHideFlags: 0
