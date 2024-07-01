@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPoint;
-    public float attackRange = 0.5f;
+    public int attackRange;
     public LayerMask enemyLayers;
     public int attackDamage = 10;
     public ClassTypes Class;
@@ -20,30 +20,32 @@ public class PlayerAttack : MonoBehaviour
         
         }else if (Class == GameManager.Mage)
         {
-            attackRange = 4f;
+            attackRange = 4;
         }
         else if(Class == GameManager.Knight)
         {
-            attackRange = 1f;
+            attackRange = 1;
         }
         else if (Class == GameManager.Hunter)
         {
-            attackRange = 0.5f;
+            attackRange = 1;
         }
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
     
         }
+        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     void Attack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        RaycastHit2D[] hitEnemies = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position,attackRange,enemyLayers);
 
-        foreach (Collider2D enemy in hitEnemies)
+        foreach (RaycastHit2D hit in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            
+            hit.collider.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }
 
@@ -52,7 +54,7 @@ public class PlayerAttack : MonoBehaviour
         if (attackPoint == null)
             return;
 
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawRay(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
     }
      
 }
