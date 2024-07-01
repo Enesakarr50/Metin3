@@ -2026,7 +2026,7 @@ MonoBehaviour:
   Class: {fileID: 0}
   GameManager: {fileID: 1599013676}
   firePoint: {fileID: 1691670607}
-  fireballPrefab: {fileID: 0}
+  fireballPrefab: {fileID: 1604341213031583281, guid: e3ff61e14bdb55049bc175580720111a, type: 3}
   fireballSpeed: 10
 --- !u!4 &1715756962
 Transform:
