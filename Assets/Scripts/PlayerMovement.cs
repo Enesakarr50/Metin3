@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void FixedUpdate()
     {
-        if (!isDead)
+        if (!isDead && photonView.IsMine)
         {
             transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
         }
@@ -135,6 +135,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
             stream.SendNext(transform.position);
             stream.SendNext(transform.rotation);
             stream.SendNext(spriteRenderer.flipX);
+            stream.SendNext(animator.GetBool("isRunning"));
             stream.SendNext(health);
         }
         else
@@ -143,6 +144,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
             transform.position = (Vector3)stream.ReceiveNext();
             transform.rotation = (Quaternion)stream.ReceiveNext();
             spriteRenderer.flipX = (bool)stream.ReceiveNext();
+            animator.SetBool("isRunning", (bool)stream.ReceiveNext());
             health = (int)stream.ReceiveNext();
         }
     }
