@@ -1,5 +1,8 @@
 using UnityEngine;
 using Photon.Pun;
+using System.Runtime.CompilerServices;
+using UnityEditorInternal;
+using UnityEditor.Animations;
 
 public class PlayerSetup : MonoBehaviourPun
 {
@@ -7,6 +10,8 @@ public class PlayerSetup : MonoBehaviourPun
     public PlayerAttack attack;
     public GameObject Camera;
     public GameObject Gm;
+    public Animator asd;
+
 
     void Start()
     {
@@ -25,12 +30,16 @@ public class PlayerSetup : MonoBehaviourPun
         attack.enabled = true;
         movement.enabled = true;
         Camera.SetActive(true);
+        
 
         Gm = GameObject.FindGameObjectWithTag("Gm");
+        
         if (Gm != null)
         {
+            
             Gm.GetComponent<GameManager>().enabled = true;
             Gm.GetComponent<InventoryController>().enabled = true;
+            asd.runtimeAnimatorController = movement.animator.runtimeAnimatorController;
         }
     }
 
