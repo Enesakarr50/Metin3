@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         if (isDead) return;
 
         attackTimer -= Time.deltaTime;
-
+        
         float distanceToPlayer = Vector3.Distance(playerTransform.position, transform.position);
 
         if (distanceToPlayer <= attackRange)

@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Start()
     {
+        Panel = GameObject.FindGameObjectWithTag("Panel");
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 

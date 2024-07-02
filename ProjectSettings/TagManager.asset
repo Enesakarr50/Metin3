@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gm
   - Obstacle
+  - Panel
   layers:
   - Default
   - TransparentFX
