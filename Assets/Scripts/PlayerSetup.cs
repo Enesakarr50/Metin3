@@ -7,6 +7,7 @@ public class PlayerSetup : MonoBehaviourPun
     public PlayerAttack attack;
     public GameObject Camera;
     public GameObject Gm;
+    public Animator Anim;
 
     void Start()
     {
@@ -25,10 +26,12 @@ public class PlayerSetup : MonoBehaviourPun
         attack.enabled = true;
         movement.enabled = true;
         Camera.SetActive(true);
+        Anim.enabled = true;
 
         Gm = GameObject.FindGameObjectWithTag("Gm");
         if (Gm != null)
         {
+            Anim = movement.animator;
             Gm.GetComponent<GameManager>().enabled = true;
             Gm.GetComponent<InventoryController>().enabled = true;
         }
