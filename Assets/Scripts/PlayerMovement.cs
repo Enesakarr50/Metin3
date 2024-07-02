@@ -155,8 +155,6 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
                     animator.runtimeAnimatorController = Class.AnimatorController;
                 }
             }
-            spriteRenderer.sprite = (Sprite)stream.ReceiveNext();
-
         }
     }
 }
