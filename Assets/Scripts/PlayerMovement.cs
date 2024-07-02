@@ -1,9 +1,11 @@
+using Photon.Pun;
+using Photon;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPun
 {
     public float moveSpeed = 5f;
     private Vector2 movement;
@@ -32,11 +34,15 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine("cd");
 
     }
-    
 
     void Update()
     {
-       
+
+        if (photonView.IsMine)
+        {
+            UpdateAnimation();
+            UpdateDirection();
+        }
         if (isDead)
             return;
 
@@ -54,8 +60,7 @@ public class PlayerMovement : MonoBehaviour
             Die();
         }
 
-        UpdateAnimation();
-        UpdateDirection();
+        
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -65,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         if (!isDead)
         {
             transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
