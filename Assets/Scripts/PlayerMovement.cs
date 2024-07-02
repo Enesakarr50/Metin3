@@ -109,14 +109,12 @@ public class PlayerMovement : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Die");
-        // Ölüm animasyonunun tamamlanmasý ve oyuncunun etkileþime girememesi için gerekli kodlarý ekleyin.
-        // Örneðin: GetComponent<Rigidbody2D>().isKinematic = true;
-        // veya: GetComponent<Collider2D>().enabled = false;
+        
     }
 
     void Attack()
     {
-        // Saldýrý animasyonu için gereken kodlarý buraya ekleyin.
+       
         animator.SetTrigger("Attack");
     }
 }
