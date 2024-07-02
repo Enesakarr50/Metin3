@@ -13,17 +13,22 @@ public class PlayerMovement : MonoBehaviour
     private bool isDead = false;
     private SpriteRenderer spriteRenderer;
 
+    private void Awake()
+    {
+        GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
+        if (Class == null)
+        {
+            Class = GameManager.CurrentClass;
+
+            gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
+        }
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if (Class == null)
-        {
-            Class = GameManager.CurrentClass;
-            
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
-        }
+        
     }
 
     void Update()

@@ -19,15 +19,15 @@ public class GameManager : MonoBehaviour
         {
             case Class.Mage:
                 CurrentClass = Mage;
-                PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
+                
                 break;
             case Class.Knight:
                 CurrentClass = Knight;
-                PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
+               
                 break;
             case Class.Hunter:
                 CurrentClass = Hunter;
-                PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
+               
                 break;
         }
     }

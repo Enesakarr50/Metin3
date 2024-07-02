@@ -13,6 +13,10 @@ public class PlayerAttack : MonoBehaviour
     public float fireballSpeed = 10f; // Fireball'un hýzý
 
     private Camera mainCamera;
+    private void Awake()
+    {
+        GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
+    }
 
     private void Start()
     {
