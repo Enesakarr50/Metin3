@@ -23,11 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public void LStart()
     {
 
-        GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
-        Debug.Log("a");
-        Panel = GameObject.FindGameObjectWithTag("Panel");
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        
         
 
         //StartCoroutine("cd");
@@ -41,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(Class);
         if (Class == null)
         {
+            GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
+            Debug.Log("a");
+            Panel = GameObject.FindGameObjectWithTag("Panel");
+            animator = GetComponent<Animator>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             Class = GameManager.CurrentClass;
             Debug.Log("anim = " + Class.AnimatorController);
             animator.runtimeAnimatorController = Class.AnimatorController;
