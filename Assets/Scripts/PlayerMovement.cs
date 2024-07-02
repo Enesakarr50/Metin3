@@ -19,7 +19,11 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
+    private void Start()
+    {
+        Class = GameManager.CurrentClass;
+        animator.runtimeAnimatorController = Class.AnimatorController;
+    }
     public void LStart()
     {
         GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
@@ -118,7 +122,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
     IEnumerator cd()
     {
         yield return new WaitForSeconds(0.1f);
-        Class = GameManager.CurrentClass;
+        
         if (Class != null)
         {
             Debug.Log("anim = " + Class.AnimatorController);

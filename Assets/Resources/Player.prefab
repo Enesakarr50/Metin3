@@ -120,7 +120,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   Panel: {fileID: 9065148515486174071, guid: 0e72fb639049d184cbdf6f82e4f5c2d2, type: 3}
   health: 100
-  animator: {fileID: 0}
+  animator: {fileID: 6148731250141315281}
 --- !u!95 &6148731250141315281
 Animator:
   serializedVersion: 5
@@ -129,7 +129,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692049304937137860}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
   m_CullingMode: 0

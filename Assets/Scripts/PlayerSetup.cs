@@ -11,6 +11,7 @@ public class PlayerSetup : MonoBehaviourPun
 
     void Start()
     {
+        Anim = movement.animator;
         if (photonView.IsMine)
         {
             IsLocalPlayer();
@@ -26,21 +27,23 @@ public class PlayerSetup : MonoBehaviourPun
         attack.enabled = true;
         movement.enabled = true;
         Camera.SetActive(true);
-        Anim.enabled = true;
+        
 
         Gm = GameObject.FindGameObjectWithTag("Gm");
         if (Gm != null)
         {
-            Anim = movement.animator;
+            
             Gm.GetComponent<GameManager>().enabled = true;
             Gm.GetComponent<InventoryController>().enabled = true;
         }
     }
+    
 
     private void DisableRemotePlayerComponents()
     {
         attack.enabled = false;
         movement.enabled = false;
         Camera.SetActive(false);
+        Anim.enabled = true;
     }
 }
