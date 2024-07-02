@@ -120,7 +120,7 @@ MonoBehaviour:
   GameManager: {fileID: 0}
   Panel: {fileID: 9065148515486174071, guid: 0e72fb639049d184cbdf6f82e4f5c2d2, type: 3}
   health: 100
-  animator: {fileID: 6148731250141315281}
+  animator: {fileID: 0}
 --- !u!95 &6148731250141315281
 Animator:
   serializedVersion: 5
@@ -131,7 +131,7 @@ Animator:
   m_GameObject: {fileID: 1692049304937137860}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f9b658328fee90d4eaaae8e36322f623, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -182,11 +182,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-<<<<<<< Updated upstream
   m_SortingOrder: 10
-=======
-  m_SortingOrder: 1
->>>>>>> Stashed changes
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -341,19 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 4
-    SynchronizeType: 0
-    Name: isRunning
-  - Type: 4
-    SynchronizeType: 0
-    Name: Die
-  - Type: 9
-    SynchronizeType: 0
-    Name: Attack
-  - Type: 9
-    SynchronizeType: 0
-    Name: Hurt
+  m_SynchronizeParameters: []
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -373,7 +357,6 @@ MonoBehaviour:
   attack: {fileID: 2426275280250958292}
   Camera: {fileID: 6355960452359438991}
   Gm: {fileID: 0}
-  asd: {fileID: 0}
 --- !u!1 &6355960452359438991
 GameObject:
   m_ObjectHideFlags: 0
