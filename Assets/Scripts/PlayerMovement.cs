@@ -133,19 +133,28 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
         {
             // Send data to other players
             stream.SendNext(transform.position);
-            stream.SendNext(transform.rotation);
             stream.SendNext(spriteRenderer.flipX);
             stream.SendNext(animator.GetBool("isRunning"));
             stream.SendNext(health);
+            stream.SendNext(Class != null ? Class.ClassNames : "");
         }
         else
         {
             // Receive data from other players
             transform.position = (Vector3)stream.ReceiveNext();
-            transform.rotation = (Quaternion)stream.ReceiveNext();
             spriteRenderer.flipX = (bool)stream.ReceiveNext();
             animator.SetBool("isRunning", (bool)stream.ReceiveNext());
             health = (int)stream.ReceiveNext();
+
+            string className = (string)stream.ReceiveNext();
+            if (Class == null || Class.ClassNames != className)
+            {
+                Class = GameManager.CurrentClass;
+                if (Class != null)
+                {
+                    animator.runtimeAnimatorController = Class.AnimatorController;
+                }
+            }
         }
     }
 }
