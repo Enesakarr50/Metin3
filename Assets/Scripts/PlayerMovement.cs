@@ -1,5 +1,6 @@
 using Photon.Pun;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviourPun, IPunObservable
@@ -136,8 +137,6 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
             stream.SendNext(spriteRenderer.flipX);
             stream.SendNext(animator.GetBool("isRunning"));
             stream.SendNext(health);
-            stream.SendNext(Class != null ? Class.ClassNames : "");
-            stream.SendNext(spriteRenderer.sprite);
         }
         else
         {
@@ -146,18 +145,6 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
             spriteRenderer.flipX = (bool)stream.ReceiveNext();
             animator.SetBool("isRunning", (bool)stream.ReceiveNext());
             health = (int)stream.ReceiveNext();
-
-            string className = (string)stream.ReceiveNext();
-            if (Class == null || Class.ClassNames != className)
-            {
-                Class = GameManager.CurrentClass;
-                if (Class != null)
-                {
-                    animator.runtimeAnimatorController = Class.AnimatorController;
-                }
-            }
-
-            spriteRenderer.sprite = (Sprite)stream.ReceiveNext();
         }
     }
 }
