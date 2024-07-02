@@ -1,11 +1,8 @@
 using Photon.Pun;
-using Photon;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
-
-public class PlayerMovement : MonoBehaviourPun
+public class PlayerMovement : MonoBehaviourPun, IPunObservable
 {
     public float moveSpeed = 5f;
     private Vector2 movement;
@@ -18,59 +15,52 @@ public class PlayerMovement : MonoBehaviourPun
     private bool isDead = false;
     private SpriteRenderer spriteRenderer;
 
-    
     private void Awake()
     {
-       
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
     public void LStart()
     {
-
         GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
         Debug.Log("a");
         Panel = GameObject.FindGameObjectWithTag("Panel");
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine("cd");
-
     }
 
     void Update()
     {
-
         if (photonView.IsMine)
         {
             UpdateAnimation();
             UpdateDirection();
+
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                Panel.SetActive(!Panel.activeSelf);
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Attack();
+            }
         }
+
         if (isDead)
             return;
-
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Panel.SetActive(!Panel.activeSelf);
-
-        }
 
         if (health <= 0)
         {
             Die();
         }
-
-        
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Attack();
-        }
     }
 
     void FixedUpdate()
     {
-        
         if (!isDead)
         {
             transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
@@ -118,14 +108,13 @@ public class PlayerMovement : MonoBehaviourPun
     {
         isDead = true;
         animator.SetTrigger("Die");
-        
     }
 
     void Attack()
     {
-       
         animator.SetTrigger("Attack");
     }
+
     IEnumerator cd()
     {
         yield return new WaitForSeconds(0.1f);
@@ -134,8 +123,27 @@ public class PlayerMovement : MonoBehaviourPun
         {
             Debug.Log("anim = " + Class.AnimatorController);
             animator.runtimeAnimatorController = Class.AnimatorController;
-            
         }
+    }
 
+    // IPunObservable implementation
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            // Send data to other players
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
+            stream.SendNext(spriteRenderer.flipX);
+            stream.SendNext(health);
+        }
+        else
+        {
+            // Receive data from other players
+            transform.position = (Vector3)stream.ReceiveNext();
+            transform.rotation = (Quaternion)stream.ReceiveNext();
+            spriteRenderer.flipX = (bool)stream.ReceiveNext();
+            health = (int)stream.ReceiveNext();
+        }
     }
 }
