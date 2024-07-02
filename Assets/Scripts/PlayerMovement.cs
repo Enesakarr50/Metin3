@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
@@ -18,35 +19,24 @@ public class PlayerMovement : MonoBehaviour
     
     private void Awake()
     {
-        
+       
     }
     public void LStart()
     {
 
-        
-        
-
-        //StartCoroutine("cd");
+        GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
+        Debug.Log("a");
+        Panel = GameObject.FindGameObjectWithTag("Panel");
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine("cd");
 
     }
     
 
     void Update()
     {
-        
-        Debug.Log(Class);
-        if (Class == null)
-        {
-            GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
-            Debug.Log("a");
-            Panel = GameObject.FindGameObjectWithTag("Panel");
-            animator = GetComponent<Animator>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            Class = GameManager.CurrentClass;
-            Debug.Log("anim = " + Class.AnimatorController);
-            animator.runtimeAnimatorController = Class.AnimatorController;
-
-        }
+       
         if (isDead)
             return;
 
@@ -89,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            //animator.SetBool("isRunning", false);
+            animator.SetBool("isRunning", false);
         }
     }
 
@@ -130,5 +120,16 @@ public class PlayerMovement : MonoBehaviour
        
         animator.SetTrigger("Attack");
     }
-    
+    IEnumerator cd()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Class = GameManager.CurrentClass;
+        if (Class != null)
+        {
+            Debug.Log("anim = " + Class.AnimatorController);
+            animator.runtimeAnimatorController = Class.AnimatorController;
+            
+        }
+
+    }
 }
