@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class RoomManageer : MonoBehaviourPunCallbacks
 {
-    GameObject _player;
+    
    // Start is called before the first frame update
    void Start()
     {
@@ -31,14 +31,9 @@ public class RoomManageer : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        _player = PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
+        GameObject _player = PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
         _player.GetComponent<PlayerSetup>().IsLocalPlayer();
-    }
-    public override void OnCreatedRoom()
+        Debug.Log("1");
 
-    {
-        
-        base.OnCreatedRoom();
-        
     }
 }
