@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
 public class ClassSelection : MonoBehaviour
 {
     public void SelectMage()
@@ -23,6 +24,7 @@ public class ClassSelection : MonoBehaviour
 
     void StartGame()
     {
+        
         SceneManager.LoadScene("GameScene");
     }
 }
