@@ -28,13 +28,24 @@ public class PlayerMovement : MonoBehaviour
         Panel = GameObject.FindGameObjectWithTag("Panel");
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        StartCoroutine("cd");
+        
+
+        //StartCoroutine("cd");
 
     }
     
 
     void Update()
     {
+        
+        Debug.Log(Class);
+        if (Class == null)
+        {
+            Class = GameManager.CurrentClass;
+            Debug.Log("anim = " + Class.AnimatorController);
+            animator.runtimeAnimatorController = Class.AnimatorController;
+
+        }
         if (isDead)
             return;
 
@@ -118,16 +129,5 @@ public class PlayerMovement : MonoBehaviour
        
         animator.SetTrigger("Attack");
     }
-    IEnumerator cd()
-    {
-        yield return new WaitForSeconds(0.1f);
-        Class = GameManager.CurrentClass;
-        if (Class != null)
-        {
-            Debug.Log("anim = " + Class.AnimatorController);
-            animator.runtimeAnimatorController = Class.AnimatorController;
-            
-        }
-
-    }
+    
 }
