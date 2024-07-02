@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,28 +11,27 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Panel;
     public int health = 100;
 
-    private Animator animator;
+    public Animator animator;
     private bool isDead = false;
     private SpriteRenderer spriteRenderer;
 
+    
     private void Awake()
     {
-        GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
-        if (Class == null)
-        {
-            Class = GameManager.CurrentClass;
-
-            gameObject.GetComponent<Animator>().runtimeAnimatorController = Class.AnimatorController;
-        }
+        
     }
-    private void Start()
+    public void LStart()
     {
+
+        GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
+        Debug.Log("a");
         Panel = GameObject.FindGameObjectWithTag("Panel");
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine("cd");
 
-        
     }
+    
 
     void Update()
     {
@@ -76,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isRunning", false);
+            //animator.SetBool("isRunning", false);
         }
     }
 
@@ -116,5 +117,17 @@ public class PlayerMovement : MonoBehaviour
     {
        
         animator.SetTrigger("Attack");
+    }
+    IEnumerator cd()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Class = GameManager.CurrentClass;
+        if (Class != null)
+        {
+            Debug.Log("anim = " + Class.AnimatorController);
+            animator.runtimeAnimatorController = Class.AnimatorController;
+            
+        }
+
     }
 }
