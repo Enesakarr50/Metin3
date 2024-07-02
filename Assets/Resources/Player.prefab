@@ -87,7 +87,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692049304937137860}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a257b5fc2ddaef45b1b55a9243151fb, type: 3}
   m_Name: 
@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 6210206156605108341}
+  attack: {fileID: 2426275280250958292}
   Camera: {fileID: 6355960452359438991}
 --- !u!1 &6355960452359438991
 GameObject:
