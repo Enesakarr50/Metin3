@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81703a37c6516ab4da117844e4e3debb, type: 3}
   m_Name: InventorySCO
   m_EditorClassIdentifier: 
-  HelmetHolder: {fileID: 21300000, guid: b3392096215be474082295a22377ff60, type: 3}
-  BodyHolder: {fileID: 21300000, guid: 1e702e3eb790e2e4994b3d2f81e7d643, type: 3}
-  LegHolder: {fileID: 21300000, guid: 9c7bace82afc811478160b9aec3ac478, type: 3}
-  WeaponHolder: {fileID: 21300000, guid: d4ae90ea202031a42a7f433ff07c0a37, type: 3}
-  Helmet: {fileID: 11400000, guid: 5743c39ed2e195f4194dcd07f83dfb34, type: 2}
-  Body: {fileID: 11400000, guid: c16967977e3b5274ebfc919d8ccffacc, type: 2}
-  Leg: {fileID: 11400000, guid: 1bb333b3bd0ff0a4c88b6ac680ea044a, type: 2}
-  Weapon: {fileID: 11400000, guid: 0b8e0316a9f0ba143b4c398c4c4052df, type: 2}
+  HelmetHolder: {fileID: 21300000, guid: a0aa0290ea6ebe049baa58e4d7c314ca, type: 3}
+  BodyHolder: {fileID: 21300000, guid: 2054eebec371e9a4cbbc17a678258d3e, type: 3}
+  LegHolder: {fileID: 21300000, guid: f5471dc58b00aea459dde851ae7c59d4, type: 3}
+  WeaponHolder: {fileID: 21300000, guid: 4f5832c8c6ba47244beac9fc1b1e0797, type: 3}
+  Helmet: {fileID: 11400000, guid: 3ababdac4e35b5b45a8043686410ebe7, type: 2}
+  Body: {fileID: 11400000, guid: 444ff1c8f02aa7048be61f7bee7c41d9, type: 2}
+  Leg: {fileID: 11400000, guid: d6dec6eda38d91a49941a16623c19b87, type: 2}
+  Weapon: {fileID: 11400000, guid: 1e19ef0e207f59044bac6997e16dd9de, type: 2}
   Ilvl: 4
+  classTypes: {fileID: 11400000, guid: 100fe0e4e2d99c54e93f3ad574a0c072, type: 2}

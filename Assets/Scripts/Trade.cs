@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Trade : MonoBehaviour
@@ -10,6 +11,9 @@ public class Trade : MonoBehaviour
     public InventoryController mainController;
     public InventoryController secController;
     public GameManager gameManager;
+    public ClassTypes Hunter;
+    public ClassTypes Knight;
+    public ClassTypes Mage;
     // Start is called before the first frame update
 
     private void Start()
@@ -29,7 +33,17 @@ public class Trade : MonoBehaviour
             Player1.Weapon = Player2.Weapon;
             Player1.classTypes = Player2.classTypes;
             gameManager.CurrentClass = Player1.classTypes;
-            
+            if(gameManager.CurrentClass == Hunter)
+            {
+                PlayerPrefs.SetInt("ClassEum", (int)Class.Hunter);
+            }else if (gameManager.CurrentClass == Knight)
+            {
+                PlayerPrefs.SetInt("ClassEum", (int)Class.Knight);
+            }else if (gameManager.CurrentClass == Mage)
+            {
+                PlayerPrefs.SetInt("ClassEum", (int)Class.Mage);
+            }
+
         }
 
         

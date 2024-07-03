@@ -13,6 +13,7 @@ public class ItemTakee : MonoBehaviour
     {
         Gm = GameObject.FindGameObjectWithTag("Gm");
         invCont = Gm.GetComponent<InventoryController>();
+        inv = invCont.inventory;
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -3,14 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public int sceneIndex;
     
-    public void Dugeon1(string sceneName)
+
+    public void ChangeScene()
     {
-        SceneManager.LoadScene("Dungeon1");
+        SceneManager.LoadScene(sceneIndex);
     }
 
-    public void Dungeon2(string sceneName)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Dungeon2");
+        ChangeScene();
     }
 }
