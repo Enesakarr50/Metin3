@@ -12,40 +12,40 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
     private bool isDead = false;
-    private SpriteRenderer spriteRenderer;
+    private Vector3 originalScale;
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalScale = transform.localScale;
+        Panel = GameObject.FindGameObjectWithTag("Panel");
     }
 
     public void Start()
     {
         GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
         Debug.Log("a");
-        Panel = GameObject.FindGameObjectWithTag("Panel");
+        Panel.SetActive(false);
         animator = GetComponent<Animator>();
         StartCoroutine("cd");
     }
 
     void Update()
     {
-            UpdateAnimation();
-            UpdateDirection();
+        UpdateAnimation();
+        UpdateDirection();
 
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                Panel.SetActive(!Panel.activeSelf);
-            }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Panel.SetActive(!Panel.activeSelf);
+        }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Attack();
-            }
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
 
         if (isDead)
             return;
@@ -81,23 +81,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-            health -= damage;
-            if (health <= 0)
-            {
-                Die();
-            }
-        
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
     void UpdateDirection()
     {
         if (movement.x > 0)
         {
-            spriteRenderer.flipX = false;
+            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
         }
         else if (movement.x < 0)
         {
-            spriteRenderer.flipX = true;
+            transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
         }
     }
 
@@ -115,12 +114,10 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator cd()
     {
         yield return new WaitForSeconds(0.1f);
-        
+
         if (Class != null)
         {
             Debug.Log("anim = " + Class.AnimatorController);
-            
         }
     }
-
 }

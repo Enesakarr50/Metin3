@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Ýlk sahneyi yükler. Sahne ismini deðiþtirebilirsiniz.
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("SampleScene");
     }
 
     public void QuitGame()

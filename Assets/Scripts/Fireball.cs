@@ -32,27 +32,35 @@ public class Fireball : MonoBehaviour
             }
             
         }
-        else if (collision.CompareTag("Obstacle"))
+
+        if(collision.CompareTag("Player"))
+        {
+
+            Destroy(gameObject);
+        }
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+         if (collision.gameObject.tag == ("Obstacle"))
         {
             TriggerExplosion();
         }
     }
 
-   
+
 
     void TriggerExplosion()
     {
         if (!isExploding)
         {
             isExploding = true;
-            animator.SetBool("isExploding", true);
-            speed = 0; // Hareketi durdur
+            
+            speed = 0;
+            Destroy(gameObject);
         }
     }
 
-    // Animasyon sonlandýðýnda bu fonksiyon çaðrýlýr
-    public void OnExplosionAnimationEnd()
-    {
-        Destroy(gameObject);
-    }
+    
 }
