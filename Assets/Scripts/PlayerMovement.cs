@@ -1,8 +1,7 @@
-using Photon.Pun;
 using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviourPun, IPunObservable
+public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Vector2 movement;
@@ -20,7 +19,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public void LStart()
+    public void Start()
     {
         GameManager = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
         Debug.Log("a");
@@ -31,8 +30,6 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void Update()
     {
-        if (photonView.IsMine)
-        {
             UpdateAnimation();
             UpdateDirection();
 
@@ -48,7 +45,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
             {
                 Attack();
             }
-        }
+        
 
         if (isDead)
             return;
@@ -61,7 +58,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void FixedUpdate()
     {
-        if (!isDead && photonView.IsMine)
+        if (!isDead)
         {
             transform.Translate(movement * moveSpeed * Time.fixedDeltaTime);
         }
@@ -71,6 +68,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
     {
         Class = GameManager.CurrentClass;
         animator.runtimeAnimatorController = Class.AnimatorController;
+
         if (movement.magnitude > 0)
         {
             animator.SetBool("isRunning", true);
@@ -83,14 +81,12 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     public void TakeDamage(int damage)
     {
-        if (photonView.IsMine) // photonView kontrolü
-        {
             health -= damage;
             if (health <= 0)
             {
                 Die();
             }
-        }
+        
     }
 
     void UpdateDirection()
@@ -119,32 +115,12 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
     IEnumerator cd()
     {
         yield return new WaitForSeconds(0.1f);
-        Class = GameManager.CurrentClass;
+        
         if (Class != null)
         {
             Debug.Log("anim = " + Class.AnimatorController);
-            animator.runtimeAnimatorController = Class.AnimatorController;
+            
         }
     }
 
-    // IPunObservable implementation
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.IsWriting)
-        {
-            // Send data to other players
-            stream.SendNext(transform.position);
-            stream.SendNext(spriteRenderer.flipX);
-            stream.SendNext(animator.GetBool("isRunning"));
-            stream.SendNext(health);
-        }
-        else
-        {
-            // Receive data from other players
-            transform.position = (Vector3)stream.ReceiveNext();
-            spriteRenderer.flipX = (bool)stream.ReceiveNext();
-            animator.SetBool("isRunning", (bool)stream.ReceiveNext());
-            health = (int)stream.ReceiveNext();
-        }
-    }
 }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Trade : MonoBehaviour
@@ -39,6 +38,7 @@ public class Trade : MonoBehaviour
     {
         if (collision.tag == "npc")
         {
+            Debug.Log("s");
             secController = collision.gameObject.GetComponent<InventoryController>();
             Player2 = secController.inventory;
         }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using Photon.Pun;
 
 public class Enemy : MonoBehaviour
 {
@@ -73,7 +72,7 @@ public class Enemy : MonoBehaviour
     private void Attack()
     {
         animator.SetBool("isAttacking", true);
-        if (playerMovement != null && playerMovement.photonView.IsMine) // photonView kontrolü
+        if (playerMovement != null) 
         {
             playerMovement.TakeDamage(attackDamage);
         }
