@@ -4,10 +4,10 @@ public class Enemy : MonoBehaviour
 {
     public int health = 100;
     public GameObject itemPrefab;
-    public float speed = 3.0f; // Düþmanýn hareket hýzý
-    public float attackRange = 2.0f; // Saldýrý menzili
-    public int attackDamage = 10; // Saldýrý hasarý
-    public float attackCooldown = 2.0f; // Saldýrý bekleme süresi
+    public float speed = 3.0f; 
+    public float attackRange = 2.0f; 
+    public int attackDamage = 10;
+    public float attackCooldown = 2.0f; 
 
     private Transform playerTransform;
     private Animator animator;
@@ -17,13 +17,15 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+       
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
+
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         if (isDead) return;
 
         attackTimer -= Time.deltaTime;

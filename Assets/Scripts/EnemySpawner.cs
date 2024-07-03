@@ -10,37 +10,60 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public EnemyType[] enemyTypes; // Düþman türleri
-    public float spawnInterval = 5.0f; // Her dalga arasýndaki süre
     public int enemiesPerWave = 5; // Her dalgada spawn edilecek düþman sayýsý
+    public float spawnInterval = 2.0f; // Düþmanlarýn spawn olma aralýðý
 
     // Spawn noktalarý
     public Transform[] spawnPoints;
 
     private float timer;
-    private Transform playerTransform;
+    private bool playerInTrigger = false;
 
     void Start()
     {
         timer = spawnInterval;
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-   
+    void Update()
+    {
+        if (playerInTrigger)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer <= 0f)
+            {
+                SpawnWave();
+                timer = spawnInterval;
+            }
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SpawnWave(other.transform.position);
+            playerInTrigger = true;
         }
     }
 
-    void SpawnWave(Vector3 spawnPosition)
+    void OnTriggerExit2D(Collider2D other)
     {
-        for (int i = 0; i < enemiesPerWave; i++)
+        if (other.CompareTag("Player"))
         {
-            GameObject enemyPrefab = GetRandomEnemyPrefab();
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            playerInTrigger = false;
+            timer = spawnInterval; // Timer'ý resetliyoruz ki oyuncu tekrar girdiðinde hemen spawn olmasýn
+        }
+    }
+
+    void SpawnWave()
+    {
+        foreach (Transform spawnPoint in spawnPoints)
+        {
+            for (int i = 0; i < enemiesPerWave; i++)
+            {
+                GameObject enemyPrefab = GetRandomEnemyPrefab();
+                Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+            }
         }
     }
 
