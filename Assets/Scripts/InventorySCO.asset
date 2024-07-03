@@ -16,8 +16,8 @@ MonoBehaviour:
   BodyHolder: {fileID: 0}
   LegHolder: {fileID: 0}
   WeaponHolder: {fileID: 0}
-  Helmet: {fileID: 11400000, guid: 07b26d4e004172d4088aa07f509401a2, type: 2}
-  Body: {fileID: 11400000, guid: 1cbabd2bedbc3604eb59eaabae92b09f, type: 2}
-  Leg: {fileID: 11400000, guid: a07793ce0eedf78479a0edf978af30b9, type: 2}
-  Weapon: {fileID: 11400000, guid: 8a8b7183e0d77cf4a83b8d453a07e125, type: 2}
-  Ilvl: 0
+  Helmet: {fileID: 0}
+  Body: {fileID: 0}
+  Leg: {fileID: 0}
+  Weapon: {fileID: 0}
+  Ilvl: 40

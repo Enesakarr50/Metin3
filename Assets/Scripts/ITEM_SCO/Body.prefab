@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invCont: {fileID: 0}
+  inv: {fileID: 11400000, guid: f6dc106d314fc6a47ba5d7efdb80b3dc, type: 2}
   Item: {fileID: 11400000, guid: 1cbabd2bedbc3604eb59eaabae92b09f, type: 2}
   Gm: {fileID: 0}
 --- !u!61 &-8773057574857752873

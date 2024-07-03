@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TMPro;
-using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
+    public bool isNPC;
     public Inventory inventory;
     public Image helmetHolder;
     public Image bodyHolder;
@@ -21,21 +22,70 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        inventory.Ilvl = iLvl;
+        iLvl = inventory.Ilvl;
     }
     private void Update()
     {
 
-        inventory.HelmetHolder = helmetHolder.sprite;
-        inventory.BodyHolder = bodyHolder.sprite;
-        inventory.LegHolder = legHolder.sprite;
-        inventory.WeaponHolder = weaponHolder.sprite;
-        inventory.Helmet = Helmet;
-        inventory.Body = Cp;
-        inventory.Leg = Lp;
-        inventory.Weapon = Weap;
+        if (isNPC == false)
+        {
+            inventory.HelmetHolder = helmetHolder.sprite;
+            inventory.BodyHolder = bodyHolder.sprite;
+            inventory.LegHolder = legHolder.sprite;
+            inventory.WeaponHolder = weaponHolder.sprite;
+            Helmet= inventory.Helmet;
+            Cp = inventory.Body;
+            Lp = inventory.Leg;
+            Weap = inventory.Weapon;
+            if(Helmet != null)
+            {
+                helmetHolder.sprite = Helmet.ItemImage;
+            }
+            else
+            {
+                helmetHolder.sprite = null;
+            }
+            if(Cp != null)
+            {
+                bodyHolder.sprite = Cp.ItemImage;
+            }
+            else
+            {
+                bodyHolder.sprite = null;
+            }
+            if(Lp != null)
+            {
+             legHolder.sprite = Lp.ItemImage;
+            }
+            else
+            {
+                legHolder.sprite = null;
+            }
+            if( Weap != null)
+            {
+             weaponHolder.sprite = Weap.ItemImage;
+            }
+            else
+            {
+                weaponHolder.sprite = null;
+            }
 
-        inventory.Ilvl = iLvl;
-        IlvlTxt.text = iLvl.ToString();
+
+
+
+
+            iLvl = inventory.Ilvl;
+            IlvlTxt.text = iLvl.ToString();
+        }
+        else
+        {
+            Helmet = inventory.Helmet;
+            Cp = inventory.Body;
+            Lp = inventory.Leg;
+            Weap = inventory.Weapon;
+
+            iLvl = inventory.Ilvl;
+        }
+        
     }
 }
