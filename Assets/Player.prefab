@@ -207,6 +207,9 @@ MonoBehaviour:
   mainController: {fileID: 0}
   secController: {fileID: 0}
   gameManager: {fileID: 0}
+  Hunter: {fileID: 11400000, guid: 2f5ed29d1e2fb764a8630afb019016ac, type: 2}
+  Knight: {fileID: 11400000, guid: da3d4bbebec9f39458c06a3d57bb8234, type: 2}
+  Mage: {fileID: 11400000, guid: 100fe0e4e2d99c54e93f3ad574a0c072, type: 2}
 --- !u!61 &7874284351488146520
 BoxCollider2D:
   m_ObjectHideFlags: 0
