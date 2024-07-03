@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Panel
   - npc
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2864128830341277283}
   m_Layer: 6
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,9 @@ MonoBehaviour:
   health: 100
   itemPrefab: {fileID: 0}
   speed: 3
+  attackRange: 2
+  attackDamage: 10
+  attackCooldown: 2
 --- !u!70 &6773035822273830177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
