@@ -4,7 +4,6 @@ public class Fireball : MonoBehaviour
 {
     public float speed = 10f;
     public int damage = 20;
-    public GameObject impactEffect; // Artýk kullanýlmayacak
     private Animator animator;
     private bool isExploding = false;
 
@@ -29,14 +28,17 @@ public class Fireball : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
+                TriggerExplosion();
             }
-            TriggerExplosion();
+            
         }
         else if (collision.CompareTag("Obstacle"))
         {
             TriggerExplosion();
         }
     }
+
+   
 
     void TriggerExplosion()
     {
