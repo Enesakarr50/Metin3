@@ -29,5 +29,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         GameObject _player = PhotonNetwork.Instantiate("Player", new Vector2(0, 0), Quaternion.identity);
+        _player.GetComponent<PlayerMovement>().LStart();
     }
 }

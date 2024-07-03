@@ -32,8 +32,7 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void Update()
     {
-        Class = GameManager.CurrentClass;
-        animator.runtimeAnimatorController = Class.AnimatorController;
+        
 
         if (photonView.IsMine)
         {
@@ -73,6 +72,8 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void UpdateAnimation()
     {
+        Class = GameManager.CurrentClass;
+        animator.runtimeAnimatorController = Class.AnimatorController;
         if (movement.magnitude > 0)
         {
             animator.SetBool("isRunning", true);
