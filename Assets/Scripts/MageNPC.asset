@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81703a37c6516ab4da117844e4e3debb, type: 3}
+  m_Name: MageNPC
+  m_EditorClassIdentifier: 
+  HelmetHolder: {fileID: 21300000, guid: a0aa0290ea6ebe049baa58e4d7c314ca, type: 3}
+  BodyHolder: {fileID: 21300000, guid: 2054eebec371e9a4cbbc17a678258d3e, type: 3}
+  LegHolder: {fileID: 21300000, guid: f5471dc58b00aea459dde851ae7c59d4, type: 3}
+  WeaponHolder: {fileID: 21300000, guid: 4f5832c8c6ba47244beac9fc1b1e0797, type: 3}
+  Helmet: {fileID: 11400000, guid: 3ababdac4e35b5b45a8043686410ebe7, type: 2}
+  Body: {fileID: 11400000, guid: 444ff1c8f02aa7048be61f7bee7c41d9, type: 2}
+  Leg: {fileID: 11400000, guid: d6dec6eda38d91a49941a16623c19b87, type: 2}
+  Weapon: {fileID: 11400000, guid: 1e19ef0e207f59044bac6997e16dd9de, type: 2}
+  Ilvl: 4
+  classTypes: {fileID: 11400000, guid: 100fe0e4e2d99c54e93f3ad574a0c072, type: 2}

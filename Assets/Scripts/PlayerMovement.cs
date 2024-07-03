@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void Update()
     {
+
+
         if (photonView.IsMine)
         {
             UpdateAnimation();

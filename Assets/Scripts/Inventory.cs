@@ -9,4 +9,5 @@ public class Inventory : ScriptableObject
     public Sprite HelmetHolder,BodyHolder,LegHolder,WeaponHolder;
     public Item Helmet, Body, Leg, Weapon;
     public int Ilvl;
+    public ClassTypes classTypes;
 }
