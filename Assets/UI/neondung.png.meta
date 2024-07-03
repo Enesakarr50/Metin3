@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,2128 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: neondung_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 963
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92798ec57f93b244a35ed6916186825
+      internalID: -794418461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_1
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 985
+        width: 190
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f20367230212d14d98b1615e598eed3
+      internalID: 1343905569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_2
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 946
+        width: 102
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb6b7eccd83efb4fa5571a8e5503c64
+      internalID: 1429312364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_3
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 956
+        width: 71
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3641d6832419e4449a4d8947c2029f4
+      internalID: 695956402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_4
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 980
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d68f05caaf5934196487e90a4b4f05
+      internalID: 2099702737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_5
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 1022
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71d8dc84af301f449c15c0e7ce7f3dd
+      internalID: -764307093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_6
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 1013
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07a5da90f80ef94c9cac75ef155a253
+      internalID: 371530367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_7
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 1013
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a011779071fe0144b3cefc88f40802d
+      internalID: -1073999737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_8
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 1022
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c9121fa756768469cd89ca794cde66
+      internalID: 1724411529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_9
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 994
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1af52da22649de4d99a5ad231e8f2eb
+      internalID: 1718465289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_10
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 1011
+        width: 70
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822d6810b02c28149bf4584336ca6437
+      internalID: -1035685915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 962
+        width: 24
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17edb810ea8f2124c826814086403b4e
+      internalID: -494776105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_12
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 962
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f65a6e7a599b8d47b68c2f535293d04
+      internalID: -652632690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_13
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 977
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210aa721797b1764696757839646abc8
+      internalID: -1240936982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_14
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 946
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b075800ea553941a1ff47b91709229
+      internalID: -890903923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_15
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 963
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294a82c998bdc1041a8d6bf49cbaf214
+      internalID: 308172199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_16
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 944
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e681a88a547f44186fabb90d8acbac
+      internalID: 594021583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_17
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 944
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ae39e985843024f836c5d492115b97
+      internalID: 1233511447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_18
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 963
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c23ffed02c04948b0c839e165bf9b1
+      internalID: 1912429866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_19
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 946
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad707c28fb003b24b9aa079757391d35
+      internalID: -412505121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 48
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c267b38a4c2c4458d96f6551f5be9f
+      internalID: 23725568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_21
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 797
+        width: 25
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93a7ff179681cf49b74305a111522a5
+      internalID: 1007243378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_22
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 797
+        width: 25
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4d433d8aea15d45b55c0a1f9041959
+      internalID: -1302265402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_23
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 821
+        width: 48
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43047f2f75d4cd343824c1695281623a
+      internalID: 1916715361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_24
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 797
+        width: 49
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d9d0de1f6581444912d77552d086e9
+      internalID: -1657145033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_25
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 821
+        width: 142
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f8c6ef3fb7b9c4bbe80c5301e36e97
+      internalID: -575425894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_26
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 845
+        width: 102
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148001355b5bc8b4fb5d5d246a17d266
+      internalID: -1749977763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_27
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 855
+        width: 71
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bad4eabfa8ff042a198eca0dff98a1
+      internalID: 919136712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_28
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 878
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8acee90c59f4840adc9d011059f53e
+      internalID: 1613441418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_29
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 885
+        width: 61
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3dcdd24856b1c6469c72df4aa5f9baa
+      internalID: -1793503744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_30
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 880
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c421c3bd2f8fb4e8a76b8de620cd42
+      internalID: -1686801481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_31
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 885
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de4ea4cb509c0a4bac2ec682060351f
+      internalID: 683582846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_32
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 885
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30182f16ea5599748a1c0053d08a979b
+      internalID: -310216652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_33
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 880
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ded2545a1cf604c8e6b1211af8bfab
+      internalID: -1477631716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_34
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 885
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d37d9970daabc4f92370ea868ef6be
+      internalID: 1087545326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_35
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 842
+        width: 36
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb06fc154250c7840a31fc971eeca3f4
+      internalID: -746607890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_36
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 842
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaabb39256f2774a9234b1308febd72
+      internalID: 697366875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_37
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 842
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ed182934f59bb42b3d21ee3f8daea1
+      internalID: 393233894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_38
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 842
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75d047548fa3fa4a869b014e8c23f6d
+      internalID: 845115326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 610
+        width: 118
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca539d62f84521441b9580dae1412898
+      internalID: -76307344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_40
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 620
+        width: 122
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dfde06609213142a531ac072cd7749
+      internalID: 1226046709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_43
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 620
+        width: 121
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2405beaba5f855d4e8b2c1a021f59045
+      internalID: -1246507740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_44
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 656
+        width: 25
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2673faf2e8bc1d34aadeb0d79c455c56
+      internalID: 222498111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_45
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 656
+        width: 49
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dea1f174e7dd3445aee38495ce7101d
+      internalID: -2017232571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_46
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 633
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b030912cdb5b044c8a587d054679ea6
+      internalID: -631972805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_47
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 633
+        width: 119
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ca2a5b475aee542a6f6d924e8cc83f
+      internalID: 294642899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_48
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 741
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6302c8c95da6114419856fa9aa3c420b
+      internalID: 1259540172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_49
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 741
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ebb8825a595c348a92bc098780301a
+      internalID: 117772404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_50
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 741
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91605c054a31dac488a8749b29fd0884
+      internalID: 729931187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_51
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 741
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43de84daeaafa75489432abab6c854cd
+      internalID: 1666494009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_52
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 752
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f1606750375e04490a5fa5c5ad8dab
+      internalID: -64425840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_53
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 760
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811a499923f348947845468a51649267
+      internalID: -1337645612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_54
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 745
+        width: 80
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0b287b21173e64ea4d8698c32923f0
+      internalID: -993434740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_55
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 743
+        width: 81
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec4c3a558223a74bbd1e3f561043e6a
+      internalID: 1969362122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_56
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 758
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27516c7f3a22ffc4999f6b983564fa70
+      internalID: -1602206833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_57
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 674
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac2ced27c873a847876584da28a75d8
+      internalID: 616671800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_58
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 674
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126c6c2977c7aa04a9f7224d12a26213
+      internalID: -1381039799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_59
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 674
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fd058faff148d4dbbfb2f110aff4c6
+      internalID: -1699070484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_60
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 682
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d304c1cfd0a0a124fbd5d8f9e54da320
+      internalID: -1510462687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_61
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 684
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb649f64abb1bc44a9987d926ef9e3f
+      internalID: -1035381446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_62
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 682
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77bd3ba056dadb42a56f8f436134255
+      internalID: 2028765634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_63
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 680
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439e7ce7ec20cf04495f09b9a33ff3d6
+      internalID: -1567937468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 469
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a687f5a8db40243a0be7121f3aedb5
+      internalID: -1315113319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_65
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 516
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3230d151ec2f424e8fe9372a71a5bcc
+      internalID: 1847141471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_66
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 469
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e09964c4d68cf446be1da6803e45d0d
+      internalID: 1129849678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_67
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 516
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c112db38bf078c94dbc726d5f9f2a02e
+      internalID: -1842925311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_68
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 563
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec10632a96364ac40a659c12002d76fc
+      internalID: 1534280855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_69
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 563
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33e18abd03f5c34ba147388ba39ea2e
+      internalID: -1676299960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_70
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 516
+        width: 73
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9e65f862b9df9459748a7c117d7b1a
+      internalID: 773185927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_71
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 516
+        width: 72
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5b4dee8e32c2d46ac2ed0c659d4d21
+      internalID: -1995143251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_72
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 437
+        width: 202
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0a19b4d87c76340a33545d4bda8a3e
+      internalID: 1316270143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_73
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 372
+        width: 137
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fa228fd2cc6754888360c7d5c18d3e
+      internalID: 291262726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_74
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 437
+        width: 204
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4428a5ea88696aa41b1e39bf3de944cf
+      internalID: 1709711626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_75
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 372
+        width: 137
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8079e1d6b8c52ac4abae9e4fe6c7d63d
+      internalID: -1221297545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_76
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 455
+        width: 184
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ceb54c732089244aace9909095174c
+      internalID: -657554158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_77
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 461
+        width: 67
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba78e04e0128fb4ab0e07a7976c1f0d
+      internalID: -760723138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_78
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 445
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e3ed8d66753634bafbb9f2af358d99
+      internalID: 1309847995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_79
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 458
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddacaa582cdf0b40843a5e4f77a72cb
+      internalID: 413359791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 188
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1ff38a8024e564984846270b5e5b67
+      internalID: -1147308596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_81
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 291
+        width: 184
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3688fc640ba2e3b408d6aa910e85c2f6
+      internalID: -301607121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_82
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 328
+        width: 44
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d59299a15e37164ea99945746047b6b
+      internalID: -281132133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_83
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 328
+        width: 66
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1e531bd47038842aaa194d5f3d3521
+      internalID: 18601029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_84
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 234
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277b0fca94a6cb54f9cf8fd44be99bd6
+      internalID: -900104212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_85
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 257
+        width: 95
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912e7b887eb7c0a45bd4e0977c1c4d57
+      internalID: 1622400132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_86
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 165
+        width: 202
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c76bef660eb1484cb37a6ec2a87285a
+      internalID: -39717185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_87
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 101
+        width: 137
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59beaab6d133cb848840d41a6d6f04d5
+      internalID: -490660654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_88
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 167
+        width: 204
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada3a639ebfe9424cb05606904b6423c
+      internalID: -53559744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_89
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 101
+        width: 137
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6357ba3f90c494191418820b47c4e2
+      internalID: 227796377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 163
+        width: 118
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac50877a4090864dacc8d7d9b151c2c
+      internalID: -1394039622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_91
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 163
+        width: 119
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68de16e09d3b8a44f9a47b8b2605627e
+      internalID: -73983802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_92
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 56
+        width: 184
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef102fa7691ea2b4d9a5c85f659725f2
+      internalID: 516867743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_93
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 93
+        width: 44
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377cbf42728553942b16f98790b2cb64
+      internalID: 812416275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_94
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 93
+        width: 66
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37c5dcf7cec898479257674a664c8d1
+      internalID: -322733463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 94
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff16946947fbb934da828eca48607f05
+      internalID: 1164368250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_96
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 0
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824d6e310fc338d4da542d1531412fa2
+      internalID: -2122756830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_41
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 963
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0750580f449e5df4c90a04daf230b02c
+      internalID: -1499991369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_42
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 820
+        width: 233
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a980dba530319e48808ffdc5f507741
+      internalID: -1240128209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_97
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 23
+        width: 94
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8c3f4fe994e794789eee3894c6b36d
+      internalID: 1628336484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_98
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 23
+        width: 94
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6af5851a6270934f8e79ac9b58a9a0d
+      internalID: -601101434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_99
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 23
+        width: 94
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f074fd9e5b85f6444a2b10b717b7abaf
+      internalID: -1746526109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neondung_100
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 257
+        width: 188
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bf6200638c2574aab1d69dba5d98c3
+      internalID: 1035495062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +2266,108 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      neondung_0: -794418461
+      neondung_1: 1343905569
+      neondung_10: -1035685915
+      neondung_100: 1035495062
+      neondung_11: -494776105
+      neondung_12: -652632690
+      neondung_13: -1240936982
+      neondung_14: -890903923
+      neondung_15: 308172199
+      neondung_16: 594021583
+      neondung_17: 1233511447
+      neondung_18: 1912429866
+      neondung_19: -412505121
+      neondung_2: 1429312364
+      neondung_20: 23725568
+      neondung_21: 1007243378
+      neondung_22: -1302265402
+      neondung_23: 1916715361
+      neondung_24: -1657145033
+      neondung_25: -575425894
+      neondung_26: -1749977763
+      neondung_27: 919136712
+      neondung_28: 1613441418
+      neondung_29: -1793503744
+      neondung_3: 695956402
+      neondung_30: -1686801481
+      neondung_31: 683582846
+      neondung_32: -310216652
+      neondung_33: -1477631716
+      neondung_34: 1087545326
+      neondung_35: -746607890
+      neondung_36: 697366875
+      neondung_37: 393233894
+      neondung_38: 845115326
+      neondung_39: -76307344
+      neondung_4: 2099702737
+      neondung_40: 1226046709
+      neondung_41: -1499991369
+      neondung_42: -1240128209
+      neondung_43: -1246507740
+      neondung_44: 222498111
+      neondung_45: -2017232571
+      neondung_46: -631972805
+      neondung_47: 294642899
+      neondung_48: 1259540172
+      neondung_49: 117772404
+      neondung_5: -764307093
+      neondung_50: 729931187
+      neondung_51: 1666494009
+      neondung_52: -64425840
+      neondung_53: -1337645612
+      neondung_54: -993434740
+      neondung_55: 1969362122
+      neondung_56: -1602206833
+      neondung_57: 616671800
+      neondung_58: -1381039799
+      neondung_59: -1699070484
+      neondung_6: 371530367
+      neondung_60: -1510462687
+      neondung_61: -1035381446
+      neondung_62: 2028765634
+      neondung_63: -1567937468
+      neondung_64: -1315113319
+      neondung_65: 1847141471
+      neondung_66: 1129849678
+      neondung_67: -1842925311
+      neondung_68: 1534280855
+      neondung_69: -1676299960
+      neondung_7: -1073999737
+      neondung_70: 773185927
+      neondung_71: -1995143251
+      neondung_72: 1316270143
+      neondung_73: 291262726
+      neondung_74: 1709711626
+      neondung_75: -1221297545
+      neondung_76: -657554158
+      neondung_77: -760723138
+      neondung_78: 1309847995
+      neondung_79: 413359791
+      neondung_8: 1724411529
+      neondung_80: -1147308596
+      neondung_81: -301607121
+      neondung_82: -281132133
+      neondung_83: 18601029
+      neondung_84: -900104212
+      neondung_85: 1622400132
+      neondung_86: -39717185
+      neondung_87: -490660654
+      neondung_88: -53559744
+      neondung_89: 227796377
+      neondung_9: 1718465289
+      neondung_90: -1394039622
+      neondung_91: -73983802
+      neondung_92: 516867743
+      neondung_93: 812416275
+      neondung_94: -322733463
+      neondung_95: 1164368250
+      neondung_96: -2122756830
+      neondung_97: 1628336484
+      neondung_98: -601101434
+      neondung_99: -1746526109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
