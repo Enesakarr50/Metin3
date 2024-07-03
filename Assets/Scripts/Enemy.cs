@@ -1,42 +1,43 @@
 using UnityEngine;
+using Photon.Pun;
 
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
     public GameObject itemPrefab;
-    public float speed = 3.0f; 
-    public float attackRange = 2.0f; 
+    public float speed = 3.0f;
+    public float attackRange = 2.0f;
     public int attackDamage = 10;
-    public float attackCooldown = 2.0f; 
+    public float attackCooldown = 2.0f;
 
     private Transform playerTransform;
     private Animator animator;
     private float attackTimer;
     private bool isDead = false;
     private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement;
 
     private void Start()
     {
-       
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerMovement = playerTransform.GetComponent<PlayerMovement>(); // PlayerMovement script'ine eriþim
     }
 
     private void Update()
     {
-
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         if (isDead) return;
 
         attackTimer -= Time.deltaTime;
-        
+
         float distanceToPlayer = Vector3.Distance(playerTransform.position, transform.position);
 
         if (distanceToPlayer <= attackRange)
         {
             if (attackTimer <= 0f)
             {
-                animator.SetBool("isAttacking", true);
+                Attack();
                 attackTimer = attackCooldown;
             }
             animator.SetBool("isWalking", false);
@@ -69,6 +70,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void Attack()
+    {
+        animator.SetBool("isAttacking", true);
+        if (playerMovement != null && playerMovement.photonView.IsMine) // photonView kontrolü
+        {
+            playerMovement.TakeDamage(attackDamage);
+        }
+    }
 
     public void TakeDamage(int damage)
     {

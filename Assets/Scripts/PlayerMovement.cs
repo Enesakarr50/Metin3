@@ -1,6 +1,5 @@
 using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviourPun, IPunObservable
@@ -32,8 +31,6 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     void Update()
     {
-        
-
         if (photonView.IsMine)
         {
             UpdateAnimation();
@@ -86,10 +83,9 @@ public class PlayerMovement : MonoBehaviourPun, IPunObservable
 
     public void TakeDamage(int damage)
     {
-        if (!isDead)
+        if (photonView.IsMine) // photonView kontrolü
         {
             health -= damage;
-            animator.SetTrigger("Hurt");
             if (health <= 0)
             {
                 Die();
