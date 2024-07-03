@@ -25,10 +25,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Class == null)
-        {
-            Class = GameManager.CurrentClass;
-        }
+        Class = GameManager.CurrentClass;
 
         if (Class == GameManager.Mage)
         {
