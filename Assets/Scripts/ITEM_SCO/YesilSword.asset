@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6939a234e98635498b3c4cf4e1ba79d, type: 3}
-  m_Name: Helmet
+  m_Name: YesilSword
   m_EditorClassIdentifier: 
-  ItemImage: {fileID: 21300000, guid: d0e5c53e76a9cec42af9448d6988abd5, type: 3}
-  ItemName: StarterHelmet
+  ItemImage: {fileID: 21300000, guid: f5f3073a112871142a8d2c2839c27845, type: 3}
+  ItemName: StarterSword
   ItemLvl: 1
-  GameObject: {fileID: 7404593568580738209, guid: 81c0a321e49d2a847a0e55587d7f319a, type: 3}
-  ItemType: 0
+  GameObject: {fileID: 730336266805167090, guid: b4cc7f5fc47d04841b5181d3618f2333, type: 3}
+  ItemType: 3
+  Class: 1

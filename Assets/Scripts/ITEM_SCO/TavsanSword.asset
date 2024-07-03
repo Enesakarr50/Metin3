@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6939a234e98635498b3c4cf4e1ba79d, type: 3}
-  m_Name: Leg
+  m_Name: TavsanSword
   m_EditorClassIdentifier: 
-  ItemImage: {fileID: 21300000, guid: da106fe481022f148b59bf4c92680b0b, type: 3}
-  ItemName: StarterLeg
+  ItemImage: {fileID: 21300000, guid: 4f5832c8c6ba47244beac9fc1b1e0797, type: 3}
+  ItemName: StarterSword
   ItemLvl: 1
-  GameObject: {fileID: 7404593568580738209, guid: 1002a2cf415529a4b90e06deb5c9c357, type: 3}
-  ItemType: 2
+  GameObject: {fileID: 730336266805167090, guid: bf3df181e97fba244b574fe9179f795a, type: 3}
+  ItemType: 3
   Class: 0

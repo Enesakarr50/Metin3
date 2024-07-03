@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81703a37c6516ab4da117844e4e3debb, type: 3}
   m_Name: InventorySCO
   m_EditorClassIdentifier: 
-  HelmetHolder: {fileID: 0}
-  BodyHolder: {fileID: 0}
-  LegHolder: {fileID: 0}
-  WeaponHolder: {fileID: 0}
-  Helmet: {fileID: 0}
-  Body: {fileID: 0}
-  Leg: {fileID: 0}
-  Weapon: {fileID: 0}
-  Ilvl: 40
+  HelmetHolder: {fileID: 21300000, guid: b3392096215be474082295a22377ff60, type: 3}
+  BodyHolder: {fileID: 21300000, guid: 1e702e3eb790e2e4994b3d2f81e7d643, type: 3}
+  LegHolder: {fileID: 21300000, guid: 9c7bace82afc811478160b9aec3ac478, type: 3}
+  WeaponHolder: {fileID: 21300000, guid: d4ae90ea202031a42a7f433ff07c0a37, type: 3}
+  Helmet: {fileID: 11400000, guid: 5743c39ed2e195f4194dcd07f83dfb34, type: 2}
+  Body: {fileID: 11400000, guid: c16967977e3b5274ebfc919d8ccffacc, type: 2}
+  Leg: {fileID: 11400000, guid: 1bb333b3bd0ff0a4c88b6ac680ea044a, type: 2}
+  Weapon: {fileID: 11400000, guid: 0b8e0316a9f0ba143b4c398c4c4052df, type: 2}
+  Ilvl: 4

@@ -20,4 +20,4 @@ MonoBehaviour:
   Body: {fileID: 11400000, guid: 1cbabd2bedbc3604eb59eaabae92b09f, type: 2}
   Leg: {fileID: 11400000, guid: a07793ce0eedf78479a0edf978af30b9, type: 2}
   Weapon: {fileID: 11400000, guid: 8a8b7183e0d77cf4a83b8d453a07e125, type: 2}
-  Ilvl: 20
+  Ilvl: 8

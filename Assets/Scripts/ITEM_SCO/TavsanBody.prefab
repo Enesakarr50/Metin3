@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4679976673861104582}
   - component: {fileID: 4006404442313496923}
   - component: {fileID: 6840387875070819423}
-  - component: {fileID: 5452274890362528836}
+  - component: {fileID: -8773057574857752873}
   m_Layer: 0
-  m_Name: Helmet
+  m_Name: TavsanBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d0e5c53e76a9cec42af9448d6988abd5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2054eebec371e9a4cbbc17a678258d3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invCont: {fileID: 0}
-  Item: {fileID: 11400000, guid: 07b26d4e004172d4088aa07f509401a2, type: 2}
+  inv: {fileID: 0}
+  Item: {fileID: 11400000, guid: 444ff1c8f02aa7048be61f7bee7c41d9, type: 2}
   Gm: {fileID: 0}
---- !u!61 &5452274890362528836
+--- !u!61 &-8773057574857752873
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
