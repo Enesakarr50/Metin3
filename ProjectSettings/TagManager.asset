@@ -9,6 +9,7 @@ TagManager:
   - Panel
   - npc
   - Enemy
+  - dm
   layers:
   - Default
   - TransparentFX

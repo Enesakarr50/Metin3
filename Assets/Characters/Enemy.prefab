@@ -104,9 +104,9 @@ MonoBehaviour:
   health: 170
   initHealth: 0
   itemPrefab:
+  - {fileID: 7404593568580738209, guid: 8fd9ca36a0881fb49b30f0821109a3ae, type: 3}
   - {fileID: 7404593568580738209, guid: 49d602fd495c69142a59e95f82a4e4cc, type: 3}
-  - {fileID: 7404593568580738209, guid: 62b9b8f95f196b44f9fc9c364fc2d489, type: 3}
-  - {fileID: 7404593568580738209, guid: 8665daed18dd4334ebe728956f0d6f3c, type: 3}
+  - {fileID: 7404593568580738209, guid: 0ed1fc1bc3e6deb47b423ba9a18a7bbd, type: 3}
   - {fileID: 730336266805167090, guid: bf3df181e97fba244b574fe9179f795a, type: 3}
   speed: 1
   attackRange: 2
