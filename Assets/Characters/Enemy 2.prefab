@@ -107,9 +107,10 @@ MonoBehaviour:
   - {fileID: 7404593568580738209, guid: 1002a2cf415529a4b90e06deb5c9c357, type: 3}
   - {fileID: 7404593568580738209, guid: 287b9ea8463c7554cab9939d229a0f7b, type: 3}
   speed: 1
-  attackRange: 1
+  attackRange: 2
   attackDamage: 10
   attackCooldown: 1
+  Suicede: 1
 --- !u!70 &6773035822273830177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,3 +1,5 @@
+using System.Linq;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -9,15 +11,20 @@ public class Enemy : MonoBehaviour
     public int attackDamage = 10;
     public float attackCooldown = 2.0f;
 
+
     private Transform playerTransform;
     private Animator animator;
     private float attackTimer;
-    private bool isDead = false;
+    public bool isDead = false;
     private SpriteRenderer spriteRenderer;
     private PlayerMovement playerMovement;
+    public GameManager gm;
+    public bool Suicede;
+    
 
     private void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -25,7 +32,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void Update()
-    {
+    { 
         if (isDead) return;
 
         attackTimer -= Time.deltaTime;
@@ -76,6 +83,11 @@ public class Enemy : MonoBehaviour
         {
             playerMovement.TakeDamage(attackDamage);
         }
+        if (Suicede == true)
+        {
+            Destroy(gameObject,1f);
+        }
+
     }
 
     public void TakeDamage(int damage)
@@ -97,9 +109,15 @@ public class Enemy : MonoBehaviour
 
         if (itemPrefab != null)
         {
-            int intex = Random.Range(0, itemPrefab.Length);
-            Debug.Log(intex);
-            Instantiate(itemPrefab[intex], transform.position, Quaternion.identity);
+            int drpp = Random.Range(0, 6);
+            if (drpp == 0)
+            {
+                int intex = Random.Range(0, itemPrefab.Length);
+                Debug.Log(intex);
+                itemPrefab[intex].GetComponent<ItemTakee>().Item.ItemLvl = (gm.GetComponent<InventoryController>().iLvl)/4;
+                Instantiate(itemPrefab[intex], transform.position, Quaternion.identity);
+            }
+           
         }
         Destroy(gameObject, 2f); // Ölüm animasyonunu oynatmak için bir gecikme ekleyin
     }

@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public EnemyType[] enemyTypes; // Düþman türleri
     public int enemiesPerWave = 5; // Her dalgada spawn edilecek düþman sayýsý
     public float spawnInterval = 2.0f; // Düþmanlarýn spawn olma aralýðý
+    public int turnCounter = 0;
 
     // Spawn noktalarý
     public Transform[] spawnPoints;
@@ -62,7 +63,9 @@ public class EnemySpawner : MonoBehaviour
             for (int i = 0; i < enemiesPerWave; i++)
             {
                 GameObject enemyPrefab = GetRandomEnemyPrefab();
+                enemyPrefab.GetComponent<Enemy>().health = 100 + 10 * turnCounter;
                 Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+                turnCounter++;
             }
         }
     }

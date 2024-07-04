@@ -33,12 +33,6 @@ public class Fireball : MonoBehaviour
             speed = 0;
             TriggerExplosion();
         }
-
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
@@ -49,7 +43,10 @@ public class Fireball : MonoBehaviour
                 TriggerExplosion();
             }
         }
+
+
     }
+
 
 
     void TriggerExplosion()

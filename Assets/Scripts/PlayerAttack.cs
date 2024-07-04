@@ -25,7 +25,12 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        if(attackDamage < GameManager.GetComponent<InventoryController>().inventory.Ilvl)
+        {
+            attackDamage += GameManager.GetComponent<InventoryController>().inventory.Ilvl;
+        }
         Class = GameManager.CurrentClass;
+        
 
         if (Class == GameManager.Mage)
         {
@@ -49,6 +54,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
+
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
