@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public GameManager GameManager;
     public GameObject Panel;
     public int health = 100;
+    public int initHealth = 100;
+    public Image healthBar;
 
     public Animator animator;
     private bool isDead = false;
@@ -27,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
         Panel.SetActive(false);
         animator = GetComponent<Animator>();
         StartCoroutine("cd");
+
+        health = initHealth;
+        UpdateHealthBar();
     }
 
     void Update()
@@ -54,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Die();
         }
+
+        UpdateHealthBar();
     }
 
     void FixedUpdate()
@@ -82,10 +91,16 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
         if (health <= 0)
         {
             Die();
         }
+    }
+
+    void UpdateHealthBar()
+    {
+        healthBar.fillAmount = (float)health / (float)initHealth;
     }
 
     void UpdateDirection()
@@ -104,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Die");
+        StartCoroutine(Respawn());
     }
 
     void Attack()
@@ -119,5 +135,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("anim = " + Class.AnimatorController);
         }
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(2f); // 2 saniye bekle
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Sahneyi yeniden yükle
     }
 }

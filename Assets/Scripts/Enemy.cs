@@ -1,15 +1,19 @@
 using System.Linq;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
+    public int initHealth;
     public GameObject[] itemPrefab;
     public float speed = 3.0f;
     public float attackRange = 2.0f;
     public int attackDamage = 10;
     public float attackCooldown = 2.0f;
+    public Image HealthBar;
 
 
     private Transform playerTransform;
@@ -29,6 +33,7 @@ public class Enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         playerMovement = playerTransform.GetComponent<PlayerMovement>(); // PlayerMovement script'ine eriþim
+        initHealth = health;
     }
 
     private void Update()
@@ -38,6 +43,8 @@ public class Enemy : MonoBehaviour
         attackTimer -= Time.deltaTime;
 
         float distanceToPlayer = Vector3.Distance(playerTransform.position, transform.position);
+
+        HealthBar.fillAmount = (float)health / (float)initHealth;
 
         if (distanceToPlayer <= attackRange)
         {
