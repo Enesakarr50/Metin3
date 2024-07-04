@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7240992349515295439}
   - component: {fileID: 5854395117835540844}
   - component: {fileID: 8128731996934912554}
+  - component: {fileID: 430415163596803662}
   m_Layer: 0
   m_Name: HunterNpc
   m_TagString: npc
@@ -145,3 +146,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.7318549, y: -0.59842336}
   m_Size: {x: 1.3153849, y: 1.7897437}
   m_Direction: 0
+--- !u!95 &430415163596803662
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513106477606544190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b23d4f75ba64a94c8dd3e4393afd04a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

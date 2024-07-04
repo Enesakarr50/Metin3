@@ -10,6 +10,12 @@ public class Fireball : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
     }
 
     void Update()
@@ -22,33 +28,28 @@ public class Fireball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Obstacle"))
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(damage);
-                TriggerExplosion();
-            }
-            
+            speed = 0;
+            TriggerExplosion();
         }
 
-        if(collision.CompareTag("Player"))
-        {
-
-            Destroy(gameObject);
-        }
         
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-         if (collision.gameObject.tag == ("Obstacle"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            TriggerExplosion();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                speed = 0;
+                enemy.TakeDamage(damage);
+                TriggerExplosion();
+            }
         }
     }
-
 
 
     void TriggerExplosion()
@@ -57,10 +58,18 @@ public class Fireball : MonoBehaviour
         {
             isExploding = true;
             
-            speed = 0;
-            Destroy(gameObject);
+
+            // Patlama animasyonunu oynat
+            if (animator != null)
+            {
+                animator.SetTrigger("isExploding");
+                Destroy(gameObject, animator.GetCurrentAnimatorStateInfo(0).length);
+            }
+            else
+            {
+                
+                Destroy(gameObject);
+            }
         }
     }
-
-    
 }

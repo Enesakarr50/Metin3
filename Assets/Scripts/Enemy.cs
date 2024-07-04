@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    public GameObject itemPrefab;
+    public GameObject[] itemPrefab;
     public float speed = 3.0f;
     public float attackRange = 2.0f;
     public int attackDamage = 10;
@@ -97,7 +97,9 @@ public class Enemy : MonoBehaviour
 
         if (itemPrefab != null)
         {
-            Instantiate(itemPrefab, transform.position, Quaternion.identity);
+            int intex = Random.Range(0, itemPrefab.Length);
+            Debug.Log(intex);
+            Instantiate(itemPrefab[intex], transform.position, Quaternion.identity);
         }
         Destroy(gameObject, 2f); // Ölüm animasyonunu oynatmak için bir gecikme ekleyin
     }

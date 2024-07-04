@@ -101,11 +101,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  itemPrefab: {fileID: 0}
-  speed: 3
-  attackRange: 2
-  attackDamage: 10
-  attackCooldown: 2
+  itemPrefab:
+  - {fileID: 7404593568580738209, guid: 49d602fd495c69142a59e95f82a4e4cc, type: 3}
+  - {fileID: 7404593568580738209, guid: 62b9b8f95f196b44f9fc9c364fc2d489, type: 3}
+  - {fileID: 7404593568580738209, guid: 8665daed18dd4334ebe728956f0d6f3c, type: 3}
+  - {fileID: 730336266805167090, guid: bf3df181e97fba244b574fe9179f795a, type: 3}
+  speed: 1
+  attackRange: 1
+  attackDamage: 5
+  attackCooldown: 3
 --- !u!70 &6773035822273830177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

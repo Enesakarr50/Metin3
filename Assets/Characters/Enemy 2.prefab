@@ -101,11 +101,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  itemPrefab: {fileID: 0}
-  speed: 3
-  attackRange: 2
+  itemPrefab:
+  - {fileID: 7404593568580738209, guid: 0ed1fc1bc3e6deb47b423ba9a18a7bbd, type: 3}
+  - {fileID: 7404593568580738209, guid: 8fd9ca36a0881fb49b30f0821109a3ae, type: 3}
+  - {fileID: 7404593568580738209, guid: 1002a2cf415529a4b90e06deb5c9c357, type: 3}
+  - {fileID: 7404593568580738209, guid: 287b9ea8463c7554cab9939d229a0f7b, type: 3}
+  speed: 1
+  attackRange: 1
   attackDamage: 10
-  attackCooldown: 2
+  attackCooldown: 1
 --- !u!70 &6773035822273830177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,8 +142,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.048428774, y: -0.71152335}
-  m_Size: {x: 0.87334204, y: 1.6200241}
+  m_Offset: {x: -0.048428774, y: -0.35211506}
+  m_Size: {x: 0.87334204, y: 0.9012075}
   m_Direction: 0
 --- !u!50 &5881413182998469123
 Rigidbody2D:

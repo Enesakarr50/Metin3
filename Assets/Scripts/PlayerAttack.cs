@@ -53,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
         mousePosition.z = 0f;
 
         Vector3 attackDirection = (mousePosition - attackPoint.position).normalized;
-        Debug.DrawRay(attackPoint.position, attackDirection * attackRange, Color.red, 0.1f);
+        
 
         RaycastHit2D[] hitEnemies = Physics2D.RaycastAll(attackPoint.position, attackDirection, attackRange, enemyLayers);
 
