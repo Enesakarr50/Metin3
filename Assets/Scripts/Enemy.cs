@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
         if (itemPrefab != null)
         {
             int drpp = Random.Range(0, 6);
-           // if (drpp == 0)
+            if (drpp == 0)
             {
                 int intex = Random.Range(0, itemPrefab.Length);
                 Debug.Log(intex);

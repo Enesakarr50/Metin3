@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -11,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform firePoint; // Fireball'un fýrlatýlacaðý nokta
     public GameObject fireballPrefab; // Fireball prefab'i
     public float fireballSpeed = 10f; // Fireball'un hýzý
+    public bool CanShoot;
 
     private Camera mainCamera;
     private void Awake()
@@ -20,6 +23,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
+        CanShoot = true;
         mainCamera = Camera.main;
     }
 
@@ -45,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
 
-            if (Class == GameManager.Mage)
+            if (Class == GameManager.Mage && CanShoot == true)
             {
                 Shoot();
             }
@@ -67,10 +71,13 @@ public class PlayerAttack : MonoBehaviour
         {
             hit.collider.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+        
     }
 
     void Shoot()
     {
+        
+        CanShoot = false;
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
 
@@ -87,5 +94,15 @@ public class PlayerAttack : MonoBehaviour
         // Fireball'un yönünü ayarla
         float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
         fireball.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        StartCoroutine("As");
+
+
+    }
+    public IEnumerator As()
+    {
+        
+        yield return new WaitForSeconds(0.5f);
+        CanShoot = true;
+
     }
 }

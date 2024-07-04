@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  initHealth: 0
   itemPrefab:
   - {fileID: 7404593568580738209, guid: 0ed1fc1bc3e6deb47b423ba9a18a7bbd, type: 3}
   - {fileID: 7404593568580738209, guid: 8fd9ca36a0881fb49b30f0821109a3ae, type: 3}

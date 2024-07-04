@@ -101,14 +101,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87769f452201834f8ac7caade6ef0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 170
+  initHealth: 0
   itemPrefab:
   - {fileID: 7404593568580738209, guid: 49d602fd495c69142a59e95f82a4e4cc, type: 3}
   - {fileID: 7404593568580738209, guid: 62b9b8f95f196b44f9fc9c364fc2d489, type: 3}
   - {fileID: 7404593568580738209, guid: 8665daed18dd4334ebe728956f0d6f3c, type: 3}
   - {fileID: 730336266805167090, guid: bf3df181e97fba244b574fe9179f795a, type: 3}
   speed: 1
-  attackRange: 1
+  attackRange: 2
   attackDamage: 5
   attackCooldown: 3
   HealthBar: {fileID: 4527454590700033705}
