@@ -117,11 +117,19 @@ public class Enemy : MonoBehaviour
         if (itemPrefab != null)
         {
             int drpp = Random.Range(0, 6);
-            if (drpp == 0)
+           // if (drpp == 0)
             {
                 int intex = Random.Range(0, itemPrefab.Length);
                 Debug.Log(intex);
-                itemPrefab[intex].GetComponent<ItemTakee>().Item.ItemLvl = (gm.GetComponent<InventoryController>().iLvl)/4;
+                if (itemPrefab[intex].GetComponent<ItemTakee>().Item.Class == gm.CurrentClass.s)
+                {
+                    itemPrefab[intex].GetComponent<ItemTakee>().Item.ItemLvl = (gm.GetComponent<InventoryController>().iLvl) / 4;
+                }
+                else if (itemPrefab[intex].GetComponent<ItemTakee>().Item.Class != gm.CurrentClass.s)
+                {
+                    itemPrefab[intex].GetComponent<ItemTakee>().Item.ItemLvl = 0;
+                }
+                
                 Instantiate(itemPrefab[intex], transform.position, Quaternion.identity);
             }
            

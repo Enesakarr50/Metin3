@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Hunter
   m_EditorClassIdentifier: 
   ClassNames: Hunter
+  s: 2
   AnimatorController: {fileID: 9100000, guid: 7b23d4f75ba64a94c8dd3e4393afd04a, type: 2}

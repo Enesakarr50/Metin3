@@ -6,6 +6,7 @@ using UnityEngine;
 public class ClassTypes : ScriptableObject
 {
     public string ClassNames;
+    public Class s;
    // public Sprite CharSprite;
     public RuntimeAnimatorController AnimatorController;
 }

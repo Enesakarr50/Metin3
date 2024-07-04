@@ -29711,7 +29711,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1035495062, guid: 1015e2031e6c7e24aa8e22d8f4ea9073, type: 3}
+  m_Sprite: {fileID: -1147308596, guid: 1015e2031e6c7e24aa8e22d8f4ea9073, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -48162,6 +48162,7 @@ MonoBehaviour:
     spawnProbability: 0.2
   enemiesPerWave: 2
   spawnInterval: 5
+  turnCounter: 0
   spawnPoints:
   - {fileID: 286904025}
 --- !u!4 &1178668767

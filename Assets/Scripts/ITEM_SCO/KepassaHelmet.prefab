@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invCont: {fileID: 0}
   inv: {fileID: 0}
-  Item: {fileID: 11400000, guid: 07b26d4e004172d4088aa07f509401a2, type: 2}
+  Item: {fileID: 11400000, guid: 5743c39ed2e195f4194dcd07f83dfb34, type: 2}
   Gm: {fileID: 0}
 --- !u!61 &5452274890362528836
 BoxCollider2D:
