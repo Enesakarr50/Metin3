@@ -3,12 +3,13 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public float speed = 5f;
-    public int damage = 20;
     private Animator animator;
     private bool isExploding = false;
+    public GameObject Player;
 
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -28,6 +29,7 @@ public class Fireball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        int damage = Player.GetComponent<PlayerAttack>().attackDamage;
         if (collision.CompareTag("Obstacle"))
         {
             speed = 0;

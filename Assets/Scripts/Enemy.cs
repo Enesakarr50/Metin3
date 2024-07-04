@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
     public int attackDamage = 10;
     public float attackCooldown = 2.0f;
     public Image HealthBar;
+    public Vector3 direction;
 
 
     private Transform playerTransform;
@@ -23,10 +25,15 @@ public class Enemy : MonoBehaviour
     private PlayerMovement playerMovement;
     public GameManager gm;
     public bool Suicede;
+    public bool isKnockBacking;
+
+
+ 
     
 
     private void Start()
     {
+  
         gm = GameObject.FindGameObjectWithTag("Gm").GetComponent<GameManager>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -63,7 +70,7 @@ public class Enemy : MonoBehaviour
 
     private void MoveTowardsPlayer()
     {
-        Vector3 direction = (playerTransform.position - transform.position).normalized;
+        direction = (playerTransform.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
 
         animator.SetBool("isWalking", true);
@@ -99,11 +106,20 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        
         animator.SetTrigger("Hurt");
-        if (health <= 0 && isDead == false)
+        if(isKnockBacking == false)
         {
-            Die();
+            speed = -speed;
+            isKnockBacking = true;
+            StartCoroutine("knockBack");
+            if (health <= 0 && isDead == false)
+            {
+                Die();
+            }
         }
+        
+        
     }
 
     private void Die()
@@ -134,5 +150,12 @@ public class Enemy : MonoBehaviour
            
         }
         Destroy(gameObject, 2f); // Ölüm animasyonunu oynatmak için bir gecikme ekleyin
+    }
+
+    IEnumerator knockBack()
+    {
+        yield return new WaitForSeconds(0.3f);
+        isKnockBacking = false;
+        speed = -speed;
     }
 }

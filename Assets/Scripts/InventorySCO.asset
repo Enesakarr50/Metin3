@@ -20,5 +20,5 @@ MonoBehaviour:
   Body: {fileID: 11400000, guid: 444ff1c8f02aa7048be61f7bee7c41d9, type: 2}
   Leg: {fileID: 11400000, guid: d6dec6eda38d91a49941a16623c19b87, type: 2}
   Weapon: {fileID: 11400000, guid: 1e19ef0e207f59044bac6997e16dd9de, type: 2}
-  Ilvl: 4
-  classTypes: {fileID: 0}
+  Ilvl: 156247
+  classTypes: {fileID: 11400000, guid: 100fe0e4e2d99c54e93f3ad574a0c072, type: 2}

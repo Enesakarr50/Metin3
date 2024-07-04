@@ -29,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(attackDamage);
         if(attackDamage < GameManager.GetComponent<InventoryController>().inventory.Ilvl)
         {
             attackDamage += GameManager.GetComponent<InventoryController>().inventory.Ilvl;
@@ -42,7 +43,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            attackRange = 1f;
+            attackRange = 3f;
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -58,20 +59,21 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-
-        Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0f;
-
-        Vector3 attackDirection = (mousePosition - attackPoint.position).normalized;
-        
-
-        RaycastHit2D[] hitEnemies = Physics2D.RaycastAll(attackPoint.position, attackDirection, attackRange, enemyLayers);
-
-        foreach (RaycastHit2D hit in hitEnemies)
+        if (Class != GameManager.Mage && CanShoot == true)
         {
-            hit.collider.GetComponent<Enemy>().TakeDamage(attackDamage);
-        }
-        
+            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0f;
+
+            Vector3 attackDirection = (mousePosition - attackPoint.position).normalized;
+
+
+            RaycastHit2D[] hitEnemies = Physics2D.RaycastAll(attackPoint.position, attackDirection, attackRange, enemyLayers);
+
+            foreach (RaycastHit2D hit in hitEnemies)
+            {
+                hit.collider.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
+        }  
     }
 
     void Shoot()
