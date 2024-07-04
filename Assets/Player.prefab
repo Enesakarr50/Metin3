@@ -32,7 +32,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.71, y: -0.02}
+  m_AnchoredPosition: {x: 0.54, y: -0.46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1692049304937137860
@@ -118,7 +118,7 @@ MonoBehaviour:
   Panel: {fileID: 9065148515486174071, guid: 0e72fb639049d184cbdf6f82e4f5c2d2, type: 3}
   health: 100
   initHealth: 100
-  hhealthBar: {fileID: 2175076914551697204}
+  healthBar: {fileID: 2175076914551697204}
   animator: {fileID: 6148731250141315281}
 --- !u!95 &6148731250141315281
 Animator:
@@ -317,10 +317,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6459156415205425652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287.59418, y: 154.95557}
-  m_SizeDelta: {x: 216.4038, y: 24.9501}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 138.57, y: -29.5}
+  m_SizeDelta: {x: 216.4038, y: 24.950104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3436427475928378234
 CanvasRenderer:
@@ -408,7 +408,7 @@ Canvas:
   m_GameObject: {fileID: 4608845394895162280}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
