@@ -2,6 +2,7 @@ using UnityEngine;
 using RestSharp;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class API_Register : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class API_Register : MonoBehaviour
         string _name = NameInp.text;
         string _mail = MailInp.text;
 
+        SceneManager.LoadScene("MainMenu");
         // PostUserData metodunu çaðýr
         PostUserData(_name, _mail).ConfigureAwait(false);
     }
